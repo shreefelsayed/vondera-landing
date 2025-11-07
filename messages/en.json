@@ -1,0 +1,156 @@
+{
+  "common": {
+    "getStarted": "Get Started",
+    "startFreeTrial": "Start Free Trial",
+    "watchDemo": "Watch Demo",
+    "learnMore": "Learn More",
+    "downloadApp": "Download App",
+    "contactUs": "Contact Us",
+    "viewAll": "View All"
+  },
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "products": "Products",
+    "resources": "Resources",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "vmedia": "VMedia",
+    "login": "Login",
+    "signup": "Sign Up"
+  },
+  "hero": {
+    "title": "We Make E-commerce Much Easier",
+    "subtitle": "The All-in-One E-commerce Platform for MENA - Your Arabic Alternative to Shopify",
+    "description": "Build, manage, and scale your online store with powerful tools designed specifically for the Middle East market. Starting from only 300 EGP/month.",
+    "stats": {
+      "stores": "10,000+ Active Stores",
+      "uptime": "99.9% Uptime",
+      "support": "24/7 Support"
+    }
+  },
+  "mediaBuyerBanner": {
+    "title": "Are you a Media Buyer?",
+    "subtitle": "Join VMedia - Offer your services to 10,000+ active merchants",
+    "cta": "Join as Media Buyer"
+  },
+  "mediaBuyerSpotlight": {
+    "title": "Media Buyers: Grow Your Business with VMedia",
+    "subtitle": "Connect with 10,000+ merchants looking for advertising experts",
+    "benefits": {
+      "access": "Access to 10K+ active e-commerce stores",
+      "compete": "Compete with top media buyers",
+      "rates": "Set your own rates and packages",
+      "earnings": "Track your earnings in real-time",
+      "reputation": "Build your reputation with verified reviews",
+      "portfolio": "Portfolio showcase to attract clients"
+    },
+    "cta": "Join VMedia Marketplace",
+    "stats": {
+      "buyers": "Media Buyers Active",
+      "services": "Services Offered"
+    }
+  },
+  "mobileApps": {
+    "title": "Manage Your Store Anywhere, Anytime",
+    "subtitle": "Full-featured mobile apps for iOS and Android",
+    "features": {
+      "notifications": "Real-time order notifications",
+      "inventory": "Inventory management on the go",
+      "orders": "Process orders from anywhere",
+      "chat": "Chat with customers instantly",
+      "analytics": "Sales analytics at your fingertips",
+      "collaboration": "Team collaboration mobile-first"
+    },
+    "rating": "4.5★ Rating",
+    "downloads": "50,000+ Downloads",
+    "platforms": "Available on iOS 16+ and Android"
+  },
+  "features": {
+    "title": "Everything You Need to Succeed Online",
+    "subtitle": "Powerful features built for modern e-commerce",
+    "websiteBuilder": {
+      "title": "Website Builder",
+      "description": "20 free professional themes, no coding required"
+    },
+    "multiChannel": {
+      "title": "Multi-Channel Selling",
+      "description": "Sell on Instagram, Facebook, Amazon & your online store"
+    },
+    "inventory": {
+      "title": "Inventory Management",
+      "description": "Real-time stock tracking and automated alerts"
+    },
+    "orderProcessing": {
+      "title": "Order Fulfillment",
+      "description": "Streamlined order processing and shipping management"
+    },
+    "analytics": {
+      "title": "AI Analytics",
+      "description": "Smart insights to grow your business faster"
+    },
+    "marketing": {
+      "title": "Marketing Tools",
+      "description": "Automated campaigns and customer engagement"
+    }
+  },
+  "subProducts": {
+    "title": "Complete E-commerce Ecosystem",
+    "vmedia": {
+      "title": "VMedia",
+      "subtitle": "Media Buying Marketplace",
+      "description": "Connect with professional media buyers to scale your ads"
+    },
+    "vpay": {
+      "title": "VPay",
+      "subtitle": "Payment Gateway",
+      "description": "Accept payments with one-click integration"
+    },
+    "vfunnel": {
+      "title": "VFunnel",
+      "subtitle": "Funnel Builder",
+      "description": "Create high-converting sales funnels"
+    },
+    "vinbox": {
+      "title": "VInbox",
+      "subtitle": "Social Inbox",
+      "description": "Unified inbox for all social messages"
+    },
+    "vcommunity": {
+      "title": "VCommunity",
+      "subtitle": "Merchant Network",
+      "description": "Connect with other merchants and share experiences"
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Choose the perfect plan for your business",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "perMonth": "/month",
+    "startingFrom": "Starting from",
+    "guarantee": "3-day money-back guarantee",
+    "cta": "Start Free Trial"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about Vondera"
+  },
+  "footer": {
+    "tagline": "We Make E-commerce Much Easier",
+    "products": "Products",
+    "company": "Company",
+    "resources": "Resources",
+    "legal": "Legal",
+    "newsletter": {
+      "title": "Subscribe to our newsletter",
+      "placeholder": "Enter your email",
+      "button": "Subscribe"
+    },
+    "copyright": "© 2025 Vondera. All rights reserved.",
+    "address": "Dokki, Giza, Egypt",
+    "email": "Info@vondera.app",
+    "phone": "+20 10 70068383"
+  }
+}

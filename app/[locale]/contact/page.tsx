@@ -1,0 +1,140 @@
+'use client';
+
+import { useState } from 'react';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import { Container } from '@/components/ui/Container';
+import { Card, CardContent } from '@/components/ui/Card';
+import Button from '@/components/ui/Button';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
+
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    alert('Thank you for contacting us! We will get back to you within 24-48 hours.');
+  };
+
+  const contactInfo = [
+    { icon: Mail, label: 'Email', value: 'Info@vondera.app', href: 'mailto:Info@vondera.app' },
+    { icon: Phone, label: 'Phone', value: '+20 10 70068383', href: 'tel:+201070068383' },
+    { icon: MapPin, label: 'Address', value: 'Dokki, Giza, Egypt', href: null },
+  ];
+
+  return (
+    <>
+      <Header />
+      <main className="min-h-screen pt-20">
+        <section className="py-20 md:py-32 bg-gradient-to-br from-primary-50 to-white">
+          <Container>
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Get in Touch</h1>
+                <p className="text-xl text-gray-600">
+                  Have questions? We'd love to hear from you. Send us a message and we'll respond within 24-48 hours.
+                </p>
+              </div>
+
+              <div className="grid lg:grid-cols-3 gap-8 mb-12">
+                {contactInfo.map((info, index) => (
+                  <Card key={index} hover={true}>
+                    <CardContent className="p-6 text-center">
+                      <div className="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <info.icon size={28} className="text-primary-600" />
+                      </div>
+                      <div className="text-sm text-gray-600 mb-1">{info.label}</div>
+                      {info.href ? (
+                        <a href={info.href} className="text-lg font-semibold text-gray-900 hover:text-primary-600">
+                          {info.value}
+                        </a>
+                      ) : (
+                        <div className="text-lg font-semibold text-gray-900">{info.value}</div>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              <Card>
+                <CardContent className="p-8">
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                          Full Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          required
+                          value={formData.name}
+                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          placeholder="John Doe"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                          Email Address *
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          required
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                          placeholder="john@example.com"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                        Subject *
+                      </label>
+                      <input
+                        type="text"
+                        id="subject"
+                        required
+                        value={formData.subject}
+                        onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                        placeholder="How can we help?"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                        Message *
+                      </label>
+                      <textarea
+                        id="message"
+                        required
+                        rows={6}
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
+                        placeholder="Tell us more about your inquiry..."
+                      />
+                    </div>
+                    <Button type="submit" variant="primary" size="lg" className="w-full md:w-auto">
+                      <Send size={20} className="mr-2" />
+                      Send Message
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
+          </Container>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
