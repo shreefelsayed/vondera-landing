@@ -101,7 +101,7 @@ We encourage you to review the privacy policies of any third-party services you 
       content: `Your information may be transferred to and processed in countries other than your own. These countries may have different data protection laws. We ensure appropriate safeguards are in place to protect your data in accordance with this privacy policy.`,
     },
     {
-      title: '10. Children's Privacy',
+      title: "10. Children's Privacy",
       content: `Our Service is not intended for users under the age of 18. We do not knowingly collect personal information from children under 18. If you become aware that a child has provided us with personal information, please contact us.`,
     },
     {
