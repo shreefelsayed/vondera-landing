@@ -1,228 +1,242 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp, Users, Zap, Check } from 'lucide-react';
-import { Container } from '@/components/ui/Container';
-import { DotPattern } from '@/components/ui/DotPattern';
-import { RetroGrid } from '@/components/ui/RetroGrid';
-import { cn } from '@/lib/utils';
+import { useRef, useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Play } from 'lucide-react';
+import Link from 'next/link';
+
+const rotatingPhrases = [
+  ['store', 'they', 'line', 'up', 'for'],
+  ['big', 'thing'],
+  ['one', 'to', 'watch'],
+  ['category', 'creator'],
+  ['unicorn', 'startup'],
+  ['household', 'name'],
+  ['global', 'empire'],
+  ['solo', 'flier'],
+];
 
 export default function HeroSectionModern() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end start'],
-  });
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoError, setVideoError] = useState(false);
 
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  useEffect(() => {
+    // Ensure video plays
+    const playVideo = async () => {
+      if (videoRef.current) {
+        try {
+          // Force video attributes
+          videoRef.current.muted = true;
+          videoRef.current.playsInline = true;
+          videoRef.current.setAttribute('playsinline', '');
+          videoRef.current.setAttribute('webkit-playsinline', '');
+          
+          // Load and play
+          await videoRef.current.load();
+          const playPromise = videoRef.current.play();
+          
+          if (playPromise !== undefined) {
+            await playPromise;
+            console.log('Video is playing successfully');
+          }
+        } catch (error) {
+          console.error('Error playing video:', error);
+          setVideoError(true);
+        }
+      }
+    };
+
+    // Initial play attempt
+    playVideo();
+
+    // Retry on user interaction
+    const handleInteraction = () => {
+      playVideo();
+      document.removeEventListener('click', handleInteraction);
+      document.removeEventListener('touchstart', handleInteraction);
+    };
+
+    document.addEventListener('click', handleInteraction);
+    document.addEventListener('touchstart', handleInteraction);
+
+    return () => {
+      document.removeEventListener('click', handleInteraction);
+      document.removeEventListener('touchstart', handleInteraction);
+    };
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPhraseIndex((prev) => (prev + 1) % rotatingPhrases.length);
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, []);
+
 
   return (
-    <section
-      ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white pt-40 pb-32"
+    <section 
+      className="relative w-full overflow-hidden bg-gray-900 h-screen" 
+      style={{ 
+        height: '110vh',
+        minHeight: '110vh',
+        maxHeight: '110vh'
+      }}
     >
-      {/* Background Effects */}
-      <DotPattern className="opacity-30" />
-      <RetroGrid className="opacity-20" angle={65} />
+      {/* Background Video - Using multiple sources for better compatibility */}
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover"
+        onError={(e) => {
+          console.error('Video error:', e);
+          setVideoError(true);
+        }}
+        onCanPlay={() => {
+          console.log('Video can play');
+          if (videoRef.current) {
+            videoRef.current.play().catch(err => console.error('Play failed:', err));
+          }
+        }}
+        style={{ opacity: videoError ? 0 : 1, transition: 'opacity 0.3s' }}
+      >
+        {/* Primary source from public directory */}
+        <source src="/video.webm" type="video/webm" />
+        {/* Fallback sources */}
+        <source src="https://cdn.coverr.co/videos/coverr-typing-on-laptop-5049/1080p.mp4" type="video/mp4" />
+        <source src="https://cdn.coverr.co/videos/coverr-woman-working-on-laptop-4646/1080p.mp4" type="video/mp4" />
+      </video>
 
-      {/* Gradient Orbs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
+      {/* Fallback background image if video fails */}
+      {videoError && (
+        <div 
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{ 
+            backgroundImage: 'url(https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1920)',
+            filter: 'brightness(0.65)'
+          }}
+        />
+      )}
 
-      <Container>
-        <motion.div style={{ y, opacity }} className="relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-violet-100 border border-violet-200 mb-8"
-            >
-              <Sparkles className="w-4 h-4 text-violet-600" />
-              <span className="text-sm font-medium text-violet-700">
-                Trusted by 10,000+ merchants across MENA
-              </span>
-            </motion.div>
+      {/* Dark overlay for better text contrast */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
 
-            {/* Main Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 mb-6"
-            >
-              Sell Online.{' '}
-              <span className="relative inline-block">
-                <span className="relative z-10 bg-gradient-to-r from-violet-600 via-purple-600 to-violet-600 bg-clip-text text-transparent">
-                  Grow Faster.
-                </span>
-                <motion.span
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 0.8, delay: 0.5 }}
-                  className="absolute bottom-2 left-0 right-0 h-3 bg-violet-200/50 -z-0 origin-left"
-                />
-              </span>
-            </motion.h1>
-
-            {/* Subtitle */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed"
-            >
-              The all-in-one e-commerce platform built for MENA. Launch your store, connect with
-              media buyers, and scale your business effortlessly.
-            </motion.p>
-
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-            >
-              <motion.button
-                whileHover={{ scale: 1.02, boxShadow: '0 20px 40px -12px rgba(124, 58, 237, 0.3)' }}
-                whileTap={{ scale: 0.98 }}
-                className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-xl font-semibold text-lg shadow-lg overflow-hidden"
+      {/* Content - Full height container */}
+      <div className="relative h-full w-full flex flex-col justify-end px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
+        {/* Main Content - Bottom Left and Right */}
+        <div className="w-full">
+          {/* Animated Heading */}
+          <div className="mb-6 sm:mb-8 md:mb-10">
+              {/* Static first line */}
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
+                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-1 sm:mb-2 leading-[1.05] tracking-tight"
               >
-                <span className="relative z-10">Start Free Trial</span>
-                <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-violet-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </motion.button>
+                Be the next
+              </motion.h1>
 
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white border-2 border-gray-200 text-gray-700 rounded-xl font-semibold text-lg hover:border-violet-300 hover:text-violet-600 transition-all"
-              >
-                Watch Demo
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M8 5v10l7-5-7-5z" />
-                </svg>
-              </motion.button>
-            </motion.div>
+              {/* Animated rotating text */}
+              <div className="relative" style={{ minHeight: '3.5rem' }}>
+                <AnimatePresence mode="wait">
+                  <motion.h2
+                    key={currentPhraseIndex}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.45, ease: [0.33, 1, 0.68, 1] }}
+                    className="absolute top-0 left-0 w-full text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight"
+                  >
+                    <span className="flex flex-wrap gap-x-2 sm:gap-x-3 md:gap-x-4">
+                      {rotatingPhrases[currentPhraseIndex].map((word, index) => (
+                        <motion.span
+                          key={`${currentPhraseIndex}-${index}`}
+                          initial={{ y: '100%', opacity: 0 }}
+                          animate={{ y: 0, opacity: 1 }}
+                          transition={{
+                            duration: 0.45,
+                            delay: index * 0.15,
+                            ease: [0.33, 1, 0.68, 1],
+                          }}
+                          className="inline-block overflow-hidden pb-2 -mt-2"
+                        >
+                          <span className="inline-block">{word}</span>
+                        </motion.span>
+                      ))}
+                    </span>
+                  </motion.h2>
+                </AnimatePresence>
+              </div>
+            </div>
 
-            {/* Trust Indicators */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600 mb-20"
-            >
-              {[
-                { icon: Check, text: 'No credit card required' },
-                { icon: Check, text: '14-day free trial' },
-                { icon: Check, text: 'Cancel anytime' },
-              ].map((item, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <item.icon className="w-4 h-4 text-green-600" />
-                  <span>{item.text}</span>
-                </div>
-              ))}
-            </motion.div>
-
-            {/* Interactive Stats Cards */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
-            >
-              {[
-                {
-                  icon: TrendingUp,
-                  value: '+300%',
-                  label: 'Average Revenue Growth',
-                  color: 'from-green-500 to-emerald-600',
-                  gradient: 'from-green-500/10 to-emerald-600/10',
-                },
-                {
-                  icon: Users,
-                  value: '10,000+',
-                  label: 'Active Merchants',
-                  color: 'from-violet-500 to-purple-600',
-                  gradient: 'from-violet-500/10 to-purple-600/10',
-                },
-                {
-                  icon: Zap,
-                  value: '5 mins',
-                  label: 'Setup Time',
-                  color: 'from-orange-500 to-red-600',
-                  gradient: 'from-orange-500/10 to-red-600/10',
-                },
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
+            {/* Bottom Row: Subtitle & CTA on left, Link on right */}
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 sm:gap-8 w-full">
+              {/* Left side: Subtitle and CTA */}
+              <div className="flex-1 max-w-md">
+                {/* Subtitle */}
+                <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                  whileHover={{ y: -5, scale: 1.02 }}
-                  className="group relative bg-white border border-gray-200 rounded-2xl p-6 hover:border-violet-200 hover:shadow-xl transition-all"
+                  transition={{ duration: 0.6, delay: 0.2, ease: [0.33, 1, 0.68, 1] }}
+                  className="text-base sm:text-lg md:text-xl text-white/95 mb-6 sm:mb-8 leading-relaxed"
                 >
-                  {/* Gradient background on hover */}
-                  <div className={cn(
-                    'absolute inset-0 rounded-2xl bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity',
-                    stat.gradient
-                  )} />
+                  Dream big, build fast, and grow far on Vondera.
+                </motion.p>
 
-                  <div className="relative z-10">
-                    {/* Icon */}
-                    <div className={cn(
-                      'w-12 h-12 rounded-xl bg-gradient-to-br flex items-center justify-center mb-4',
-                      stat.color
-                    )}>
-                      <stat.icon className="w-6 h-6 text-white" />
-                    </div>
-
-                    {/* Value */}
-                    <div className={cn(
-                      'text-3xl font-bold mb-2 bg-gradient-to-r bg-clip-text text-transparent',
-                      stat.color
-                    )}>
-                      {stat.value}
-                    </div>
-
-                    {/* Label */}
-                    <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
-                  </div>
-
-                  {/* Animated border */}
-                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity">
-                    <div className={cn(
-                      'absolute inset-0 rounded-2xl bg-gradient-to-r p-[2px]',
-                      stat.color
-                    )}>
-                      <div className="h-full w-full rounded-2xl bg-white" />
-                    </div>
-                  </div>
+                {/* Primary CTA Button */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3, ease: [0.33, 1, 0.68, 1] }}
+                >
+                  <button className="px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-gray-900 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 transition-colors shadow-xl">
+                    Start for free
+                  </button>
                 </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </motion.div>
-      </Container>
+              </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-gray-300 rounded-full p-1"
-        >
-          <div className="w-1 h-2 bg-violet-600 rounded-full mx-auto" />
-        </motion.div>
-      </motion.div>
+              {/* Right side: Why we build Vondera link */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4, ease: [0.33, 1, 0.68, 1] }}
+                className="hidden sm:block"
+              >
+                <Link 
+                  href="#why-vondera"
+                  className="inline-flex items-center gap-2 text-white hover:text-white/80 transition-colors group"
+                >
+                  <Play className="w-3 h-3 fill-current" />
+                  <span className="text-base sm:text-lg font-medium">Why we build Vondera</span>
+                </Link>
+              </motion.div>
+
+              {/* Mobile version - below button */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4, ease: [0.33, 1, 0.68, 1] }}
+                className="sm:hidden"
+              >
+                <Link 
+                  href="#why-vondera"
+                  className="inline-flex items-center gap-2 text-white hover:text-white/80 transition-colors underline underline-offset-4"
+                >
+                  <span className="text-base font-medium">Why we build Vondera</span>
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      
+      {/* Rounded bottom edge - positioned at the bottom 10vh */}
+      <div className="absolute bottom-0 left-0 right-0 h-[10vh] bg-white rounded-t-[2.5rem] sm:rounded-t-[3rem] md:rounded-t-[4rem] lg:rounded-t-[5rem] shadow-[0_-8px_48px_0_rgba(0,0,0,0.24),0_-4px_8px_0_rgba(0,0,0,0.16)] z-10" />
     </section>
   );
 }

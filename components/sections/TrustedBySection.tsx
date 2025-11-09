@@ -12,7 +12,7 @@ export default function TrustedBySection() {
   ];
 
   return (
-    <section className="py-16 bg-white border-y border-gray-100">
+    <section className="relative py-16 bg-white border-y border-gray-100">
       <Container>
         <div className="text-center mb-12">
           <motion.p

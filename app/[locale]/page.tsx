@@ -17,7 +17,7 @@ import SocialProofSection from '@/components/sections/SocialProofSection';
 import ThemesSection from '@/components/sections/ThemesSection';
 import MobileAppsSection from '@/components/sections/MobileAppsSection';
 import PricingSection from '@/components/sections/PricingSection';
-import SecuritySection from '@/components/sections/SecuritySection';
+
 import BlogSection from '@/components/sections/BlogSection';
 import NewsletterSection from '@/components/sections/NewsletterSection';
 import FinalCTASection from '@/components/sections/FinalCTASection';
@@ -43,13 +43,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default function HomePage() {
   return (
     <>
-      <AnnouncementBanner />
       <Header />
       <main className="min-h-screen">
         <HeroSectionModern />
         <TrustedBySection />
-        <StatsSection />
-        <FeaturesSection />
         <ProductDemoSection />
         <SubProductsSection />
         <ComparisonSection />
@@ -60,9 +57,6 @@ export default function HomePage() {
         <ThemesSection />
         <MobileAppsSection />
         <PricingSection />
-        <SecuritySection />
-        <BlogSection />
-        <NewsletterSection />
         <FinalCTASection />
         <FAQSection />
       </main>

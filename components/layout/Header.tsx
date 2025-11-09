@@ -31,39 +31,80 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'fixed top-[52px] left-0 right-0 z-40 transition-all duration-300',
-        isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-md' : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
+        isScrolled 
+          ? 'bg-white/95 backdrop-blur-lg shadow-md' 
+          : 'bg-transparent before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-b before:from-black/20 before:to-transparent before:pointer-events-none'
       )}
       dir={isRTL ? 'rtl' : 'ltr'}
     >
       <Container>
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-16 md:h-20 relative z-10">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">V</span>
             </div>
-            <span className="text-2xl font-bold gradient-text">Vondera</span>
+            <span className={cn(
+              "text-2xl font-bold transition-colors duration-300",
+              isScrolled ? "gradient-text" : "text-white"
+            )}>Vondera</span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8" dir="ltr">
-            <Link href={`/${locale}#features`} className="text-gray-700 hover:text-primary-500 transition-colors">
+            <Link 
+              href={`/${locale}#features`} 
+              className={cn(
+                "transition-colors duration-300 hover:text-primary-500",
+                isScrolled ? "text-gray-700" : "text-white"
+              )}
+            >
               {t('features')}
             </Link>
-            <Link href={`/${locale}#pricing`} className="text-gray-700 hover:text-primary-500 transition-colors">
+            <Link 
+              href={`/${locale}#pricing`} 
+              className={cn(
+                "transition-colors duration-300 hover:text-primary-500",
+                isScrolled ? "text-gray-700" : "text-white"
+              )}
+            >
               {t('pricing')}
             </Link>
-            <Link href={`/${locale}/vmedia`} className="text-vmedia-600 hover:text-vmedia-700 font-semibold transition-colors">
+            <Link 
+              href={`/${locale}/vmedia`} 
+              className={cn(
+                "font-semibold transition-colors duration-300",
+                isScrolled ? "text-vmedia-600 hover:text-vmedia-700" : "text-white hover:text-vmedia-400"
+              )}
+            >
               {t('vmedia')}
             </Link>
-            <Link href={`/${locale}/blog`} className="text-gray-700 hover:text-primary-500 transition-colors">
+            <Link 
+              href={`/${locale}/blog`} 
+              className={cn(
+                "transition-colors duration-300 hover:text-primary-500",
+                isScrolled ? "text-gray-700" : "text-white"
+              )}
+            >
               {t('blog')}
             </Link>
-            <Link href={`/${locale}/about`} className="text-gray-700 hover:text-primary-500 transition-colors">
+            <Link 
+              href={`/${locale}/about`} 
+              className={cn(
+                "transition-colors duration-300 hover:text-primary-500",
+                isScrolled ? "text-gray-700" : "text-white"
+              )}
+            >
               {t('about')}
             </Link>
-            <Link href={`/${locale}/contact`} className="text-gray-700 hover:text-primary-500 transition-colors">
+            <Link 
+              href={`/${locale}/contact`} 
+              className={cn(
+                "transition-colors duration-300 hover:text-primary-500",
+                isScrolled ? "text-gray-700" : "text-white"
+              )}
+            >
               {t('contact')}
             </Link>
           </nav>
@@ -72,7 +113,10 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <button
               onClick={toggleLanguage}
-              className="flex items-center space-x-1 text-gray-700 hover:text-primary-500 transition-colors"
+              className={cn(
+                "flex items-center space-x-1 transition-colors duration-300 hover:text-primary-500",
+                isScrolled ? "text-gray-700" : "text-white"
+              )}
             >
               <Globe size={18} />
               <span className="text-sm font-medium">{locale === 'en' ? 'AR' : 'EN'}</span>
@@ -88,7 +132,10 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-gray-700 hover:text-primary-500"
+            className={cn(
+              "lg:hidden p-2 transition-colors duration-300 hover:text-primary-500",
+              isScrolled ? "text-gray-700" : "text-white"
+            )}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
