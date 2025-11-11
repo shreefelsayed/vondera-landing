@@ -3,7 +3,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Play, CheckCircle, Apple, Smartphone } from 'lucide-react';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
 

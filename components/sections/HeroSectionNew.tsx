@@ -3,7 +3,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Play, Sparkles, TrendingUp, Users, Zap } from 'lucide-react';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
 import { useRef, useEffect, useState } from 'react';

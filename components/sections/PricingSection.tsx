@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 
 export default function PricingSection() {

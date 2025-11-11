@@ -363,7 +363,9 @@ export default function ThemesSection() {
                         <Star size={16} className="fill-yellow-400 text-yellow-400" />
                         <span className="text-sm font-semibold text-gray-900">{theme.rating}</span>
                       </div>
-                      <div className="text-sm text-gray-500">{theme.downloads.toLocaleString()} downloads</div>
+                      <div className="text-sm text-gray-500" suppressHydrationWarning>
+                        {theme.downloads.toLocaleString()} downloads
+                      </div>
                     </div>
 
                     {/* Features */}
