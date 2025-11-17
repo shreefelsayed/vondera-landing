@@ -88,8 +88,7 @@ export default function PartnersPage() {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
-        subject: `Partnership Inquiry - ${formData.company}`,
-        message: formData.message,
+        message: `Company: ${formData.company}\n\n${formData.message}`,
       });
 
       setSubmitSuccess(true);
