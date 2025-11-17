@@ -57,7 +57,7 @@ export default function FAQSection() {
               >
                 <div className="flex justify-between items-center">
                   <h3 className="text-lg font-semibold text-gray-900 pr-8">
-                    {faq.question}
+                    {t(`${faq.key}.q`)}
                   </h3>
                   <ChevronDown
                     size={24}
@@ -76,7 +76,7 @@ export default function FAQSection() {
                       className="overflow-hidden"
                     >
                       <p className="text-gray-600 mt-4 leading-relaxed">
-                        {faq.answer}
+                        {t(`${faq.key}.a`)}
                       </p>
                     </motion.div>
                   )}
