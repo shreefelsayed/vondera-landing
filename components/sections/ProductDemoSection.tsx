@@ -23,9 +23,9 @@ import {
   Users,
   Zap,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { forwardRef, useRef, useState } from "react";
-import { useTranslations } from "next-intl";
 
 // Circle component for animated beam
 const Circle = forwardRef<
@@ -155,7 +155,7 @@ const SocialIcons = {
 
 export default function ProductDemoSection() {
   const [activeTab, setActiveTab] = useState(0);
-  const t = useTranslations('productDemo');
+  const t = useTranslations("productDemo");
 
   // Refs for animated beams in Social Inbox
   const containerRef = useRef<HTMLDivElement>(null);
@@ -171,45 +171,45 @@ export default function ProductDemoSection() {
   const orderNotifications = [
     {
       id: 1,
-      customer: t('orderNotifications.order1.customer'),
-      amount: t('orderNotifications.order1.amount'),
-      product: t('orderNotifications.order1.product'),
-      time: t('orderNotifications.order1.time'),
+      customer: t("orderNotifications.order1.customer"),
+      amount: t("orderNotifications.order1.amount"),
+      product: t("orderNotifications.order1.product"),
+      time: t("orderNotifications.order1.time"),
     },
     {
       id: 2,
-      customer: t('orderNotifications.order2.customer'),
-      amount: t('orderNotifications.order2.amount'),
-      product: t('orderNotifications.order2.product'),
-      time: t('orderNotifications.order2.time'),
+      customer: t("orderNotifications.order2.customer"),
+      amount: t("orderNotifications.order2.amount"),
+      product: t("orderNotifications.order2.product"),
+      time: t("orderNotifications.order2.time"),
     },
     {
       id: 3,
-      customer: t('orderNotifications.order3.customer'),
-      amount: t('orderNotifications.order3.amount'),
-      product: t('orderNotifications.order3.product'),
-      time: t('orderNotifications.order3.time'),
+      customer: t("orderNotifications.order3.customer"),
+      amount: t("orderNotifications.order3.amount"),
+      product: t("orderNotifications.order3.product"),
+      time: t("orderNotifications.order3.time"),
     },
     {
       id: 4,
-      customer: t('orderNotifications.order4.customer'),
-      amount: t('orderNotifications.order4.amount'),
-      product: t('orderNotifications.order4.product'),
-      time: t('orderNotifications.order4.time'),
+      customer: t("orderNotifications.order4.customer"),
+      amount: t("orderNotifications.order4.amount"),
+      product: t("orderNotifications.order4.product"),
+      time: t("orderNotifications.order4.time"),
     },
     {
       id: 5,
-      customer: t('orderNotifications.order5.customer'),
-      amount: t('orderNotifications.order5.amount'),
-      product: t('orderNotifications.order5.product'),
-      time: t('orderNotifications.order5.time'),
+      customer: t("orderNotifications.order5.customer"),
+      amount: t("orderNotifications.order5.amount"),
+      product: t("orderNotifications.order5.product"),
+      time: t("orderNotifications.order5.time"),
     },
     {
       id: 6,
-      customer: t('orderNotifications.order6.customer'),
-      amount: t('orderNotifications.order6.amount'),
-      product: t('orderNotifications.order6.product'),
-      time: t('orderNotifications.order6.time'),
+      customer: t("orderNotifications.order6.customer"),
+      amount: t("orderNotifications.order6.amount"),
+      product: t("orderNotifications.order6.product"),
+      time: t("orderNotifications.order6.time"),
     },
   ];
 
@@ -217,14 +217,23 @@ export default function ProductDemoSection() {
     {
       id: 0,
       icon: Layout,
-      title: t('tabs.websiteBuilder.title'),
-      description: t('tabs.websiteBuilder.description'),
-      subtitle: t('tabs.websiteBuilder.subtitle'),
+      title: t("tabs.websiteBuilder.title"),
+      description: t("tabs.websiteBuilder.description"),
+      subtitle: t("tabs.websiteBuilder.subtitle"),
       features: [
-        { text: t('tabs.websiteBuilder.features.dragDrop'), icon: Zap },
-        { text: t('tabs.websiteBuilder.features.mobileResponsive'), icon: CheckCircle2 },
-        { text: t('tabs.websiteBuilder.features.seoOptimized'), icon: TrendingUp },
-        { text: t('tabs.websiteBuilder.features.customTemplates'), icon: Layout },
+        { text: t("tabs.websiteBuilder.features.dragDrop"), icon: Zap },
+        {
+          text: t("tabs.websiteBuilder.features.mobileResponsive"),
+          icon: CheckCircle2,
+        },
+        {
+          text: t("tabs.websiteBuilder.features.seoOptimized"),
+          icon: TrendingUp,
+        },
+        {
+          text: t("tabs.websiteBuilder.features.customTemplates"),
+          icon: Layout,
+        },
       ],
       color: "from-violet-500 to-purple-600",
       demoGif: "/demo/themebuilder.gif",
@@ -232,14 +241,14 @@ export default function ProductDemoSection() {
     {
       id: 1,
       icon: GitBranch,
-      title: t('tabs.funnelBuilder.title'),
-      description: t('tabs.funnelBuilder.description'),
-      subtitle: t('tabs.funnelBuilder.subtitle'),
+      title: t("tabs.funnelBuilder.title"),
+      description: t("tabs.funnelBuilder.description"),
+      subtitle: t("tabs.funnelBuilder.subtitle"),
       features: [
-        { text: t('tabs.funnelBuilder.features.preBuilt'), icon: Layout },
-        { text: t('tabs.funnelBuilder.features.abTesting'), icon: BarChart3 },
-        { text: t('tabs.funnelBuilder.features.analytics'), icon: TrendingUp },
-        { text: t('tabs.funnelBuilder.features.upsell'), icon: Zap },
+        { text: t("tabs.funnelBuilder.features.preBuilt"), icon: Layout },
+        { text: t("tabs.funnelBuilder.features.abTesting"), icon: BarChart3 },
+        { text: t("tabs.funnelBuilder.features.analytics"), icon: TrendingUp },
+        { text: t("tabs.funnelBuilder.features.upsell"), icon: Zap },
       ],
       color: "from-blue-500 to-cyan-600",
       demoGif: "/demo/funnelbuilder.gif",
@@ -247,14 +256,20 @@ export default function ProductDemoSection() {
     {
       id: 2,
       icon: MessageSquare,
-      title: t('tabs.socialInbox.title'),
-      description: t('tabs.socialInbox.description'),
-      subtitle: t('tabs.socialInbox.subtitle'),
+      title: t("tabs.socialInbox.title"),
+      description: t("tabs.socialInbox.description"),
+      subtitle: t("tabs.socialInbox.subtitle"),
       features: [
-        { text: t('tabs.socialInbox.features.multiPlatform'), icon: MessageSquare },
-        { text: t('tabs.socialInbox.features.aiPowered'), icon: Zap },
-        { text: t('tabs.socialInbox.features.teamCollaboration'), icon: Users },
-        { text: t('tabs.socialInbox.features.autoResponses'), icon: CheckCircle2 },
+        {
+          text: t("tabs.socialInbox.features.multiPlatform"),
+          icon: MessageSquare,
+        },
+        { text: t("tabs.socialInbox.features.aiPowered"), icon: Zap },
+        { text: t("tabs.socialInbox.features.teamCollaboration"), icon: Users },
+        {
+          text: t("tabs.socialInbox.features.autoResponses"),
+          icon: CheckCircle2,
+        },
       ],
       color: "from-orange-500 to-amber-600",
       demoGif: "/demo/vinbox.gif",
@@ -262,14 +277,14 @@ export default function ProductDemoSection() {
     {
       id: 3,
       icon: ShoppingCart,
-      title: t('tabs.orders.title'),
-      description: t('tabs.orders.description'),
-      subtitle: t('tabs.orders.subtitle'),
+      title: t("tabs.orders.title"),
+      description: t("tabs.orders.description"),
+      subtitle: t("tabs.orders.subtitle"),
       features: [
-        { text: t('tabs.orders.features.realTimeTracking'), icon: Clock },
-        { text: t('tabs.orders.features.bulkProcessing'), icon: CheckCircle2 },
-        { text: t('tabs.orders.features.automatedFulfillment'), icon: Zap },
-        { text: t('tabs.orders.features.customStatuses'), icon: TrendingUp },
+        { text: t("tabs.orders.features.realTimeTracking"), icon: Clock },
+        { text: t("tabs.orders.features.bulkProcessing"), icon: CheckCircle2 },
+        { text: t("tabs.orders.features.automatedFulfillment"), icon: Zap },
+        { text: t("tabs.orders.features.customStatuses"), icon: TrendingUp },
       ],
       color: "from-green-500 to-emerald-600",
       demoGif: "/demo/orders.gif",
@@ -277,14 +292,26 @@ export default function ProductDemoSection() {
     {
       id: 4,
       icon: Users,
-      title: t('tabs.teamManagement.title'),
-      description: t('tabs.teamManagement.description'),
-      subtitle: t('tabs.teamManagement.subtitle'),
+      title: t("tabs.teamManagement.title"),
+      description: t("tabs.teamManagement.description"),
+      subtitle: t("tabs.teamManagement.subtitle"),
       features: [
-        { text: t('tabs.teamManagement.features.roleBasedAccess'), icon: Users },
-        { text: t('tabs.teamManagement.features.activityTracking'), icon: BarChart3 },
-        { text: t('tabs.teamManagement.features.performanceMetrics'), icon: TrendingUp },
-        { text: t('tabs.teamManagement.features.teamChat'), icon: MessageSquare },
+        {
+          text: t("tabs.teamManagement.features.roleBasedAccess"),
+          icon: Users,
+        },
+        {
+          text: t("tabs.teamManagement.features.activityTracking"),
+          icon: BarChart3,
+        },
+        {
+          text: t("tabs.teamManagement.features.performanceMetrics"),
+          icon: TrendingUp,
+        },
+        {
+          text: t("tabs.teamManagement.features.teamChat"),
+          icon: MessageSquare,
+        },
       ],
       color: "from-pink-500 to-rose-600",
       demoGif: "/demo/team.gif",
@@ -292,14 +319,17 @@ export default function ProductDemoSection() {
     {
       id: 5,
       icon: Package,
-      title: t('tabs.inventory.title'),
-      description: t('tabs.inventory.description'),
-      subtitle: t('tabs.inventory.subtitle'),
+      title: t("tabs.inventory.title"),
+      description: t("tabs.inventory.description"),
+      subtitle: t("tabs.inventory.subtitle"),
       features: [
-        { text: t('tabs.inventory.features.multiWarehouse'), icon: Package },
-        { text: t('tabs.inventory.features.lowStockAlerts'), icon: Clock },
-        { text: t('tabs.inventory.features.batchTracking'), icon: CheckCircle2 },
-        { text: t('tabs.inventory.features.autoReordering'), icon: Zap },
+        { text: t("tabs.inventory.features.multiWarehouse"), icon: Package },
+        { text: t("tabs.inventory.features.lowStockAlerts"), icon: Clock },
+        {
+          text: t("tabs.inventory.features.batchTracking"),
+          icon: CheckCircle2,
+        },
+        { text: t("tabs.inventory.features.autoReordering"), icon: Zap },
       ],
       color: "from-indigo-500 to-purple-600",
       demoGif: "/demo/inventory.gif",
@@ -307,14 +337,20 @@ export default function ProductDemoSection() {
     {
       id: 6,
       icon: Users,
-      title: t('tabs.community.title'),
-      description: t('tabs.community.description'),
-      subtitle: t('tabs.community.subtitle'),
+      title: t("tabs.community.title"),
+      description: t("tabs.community.description"),
+      subtitle: t("tabs.community.subtitle"),
       features: [
-        { text: t('tabs.community.features.memberForums'), icon: MessageSquare },
-        { text: t('tabs.community.features.exclusiveContent'), icon: Zap },
-        { text: t('tabs.community.features.badgesRewards'), icon: CheckCircle2 },
-        { text: t('tabs.community.features.eventsWebinars'), icon: TrendingUp },
+        {
+          text: t("tabs.community.features.memberForums"),
+          icon: MessageSquare,
+        },
+        { text: t("tabs.community.features.exclusiveContent"), icon: Zap },
+        {
+          text: t("tabs.community.features.badgesRewards"),
+          icon: CheckCircle2,
+        },
+        { text: t("tabs.community.features.eventsWebinars"), icon: TrendingUp },
       ],
       color: "from-teal-500 to-cyan-600",
       demoGif: "/demo/commuinty.gif",
@@ -322,14 +358,17 @@ export default function ProductDemoSection() {
     {
       id: 7,
       icon: Globe,
-      title: t('tabs.domains.title'),
-      description: t('tabs.domains.description'),
-      subtitle: t('tabs.domains.subtitle'),
+      title: t("tabs.domains.title"),
+      description: t("tabs.domains.description"),
+      subtitle: t("tabs.domains.subtitle"),
       features: [
-        { text: t('tabs.domains.features.customDomain'), icon: Globe },
-        { text: t('tabs.domains.features.sslCertificates'), icon: CheckCircle2 },
-        { text: t('tabs.domains.features.dnsManagement'), icon: Zap },
-        { text: t('tabs.domains.features.subdomainSupport'), icon: TrendingUp },
+        { text: t("tabs.domains.features.customDomain"), icon: Globe },
+        {
+          text: t("tabs.domains.features.sslCertificates"),
+          icon: CheckCircle2,
+        },
+        { text: t("tabs.domains.features.dnsManagement"), icon: Zap },
+        { text: t("tabs.domains.features.subdomainSupport"), icon: TrendingUp },
       ],
       color: "from-cyan-500 to-blue-600",
       demoGif: "/demo/domain.gif",
@@ -337,14 +376,14 @@ export default function ProductDemoSection() {
     {
       id: 8,
       icon: Truck,
-      title: t('tabs.shipping.title'),
-      description: t('tabs.shipping.description'),
-      subtitle: t('tabs.shipping.subtitle'),
+      title: t("tabs.shipping.title"),
+      description: t("tabs.shipping.description"),
+      subtitle: t("tabs.shipping.subtitle"),
       features: [
-        { text: t('tabs.shipping.features.multiCarrier'), icon: Truck },
-        { text: t('tabs.shipping.features.realTimeTracking'), icon: Clock },
-        { text: t('tabs.shipping.features.automatedLabels'), icon: Zap },
-        { text: t('tabs.shipping.features.rateComparison'), icon: TrendingUp },
+        { text: t("tabs.shipping.features.multiCarrier"), icon: Truck },
+        { text: t("tabs.shipping.features.realTimeTracking"), icon: Clock },
+        { text: t("tabs.shipping.features.automatedLabels"), icon: Zap },
+        { text: t("tabs.shipping.features.rateComparison"), icon: TrendingUp },
       ],
       color: "from-amber-500 to-orange-600",
       demoGif: "/demo/shipping.gif",
@@ -352,14 +391,20 @@ export default function ProductDemoSection() {
     {
       id: 9,
       icon: CreditCard,
-      title: t('tabs.payments.title'),
-      description: t('tabs.payments.description'),
-      subtitle: t('tabs.payments.subtitle'),
+      title: t("tabs.payments.title"),
+      description: t("tabs.payments.description"),
+      subtitle: t("tabs.payments.subtitle"),
       features: [
-        { text: t('tabs.payments.features.multiplePaymentMethods'), icon: CreditCard },
-        { text: t('tabs.payments.features.secureTransactions'), icon: CheckCircle2 },
-        { text: t('tabs.payments.features.instantPayouts'), icon: Zap },
-        { text: t('tabs.payments.features.fraudProtection'), icon: TrendingUp },
+        {
+          text: t("tabs.payments.features.multiplePaymentMethods"),
+          icon: CreditCard,
+        },
+        {
+          text: t("tabs.payments.features.secureTransactions"),
+          icon: CheckCircle2,
+        },
+        { text: t("tabs.payments.features.instantPayouts"), icon: Zap },
+        { text: t("tabs.payments.features.fraudProtection"), icon: TrendingUp },
       ],
       color: "from-emerald-500 to-green-600",
       demoGif: "/demo/payments.gif",
@@ -367,14 +412,20 @@ export default function ProductDemoSection() {
     {
       id: 10,
       icon: Target,
-      title: t('tabs.mediaBuyers.title'),
-      description: t('tabs.mediaBuyers.description'),
-      subtitle: t('tabs.mediaBuyers.subtitle'),
+      title: t("tabs.mediaBuyers.title"),
+      description: t("tabs.mediaBuyers.description"),
+      subtitle: t("tabs.mediaBuyers.subtitle"),
       features: [
-        { text: t('tabs.mediaBuyers.features.campaignTracking'), icon: BarChart3 },
-        { text: t('tabs.mediaBuyers.features.roiAnalytics'), icon: TrendingUp },
-        { text: t('tabs.mediaBuyers.features.multiPixelSupport'), icon: Target },
-        { text: t('tabs.mediaBuyers.features.abTesting'), icon: Zap },
+        {
+          text: t("tabs.mediaBuyers.features.campaignTracking"),
+          icon: BarChart3,
+        },
+        { text: t("tabs.mediaBuyers.features.roiAnalytics"), icon: TrendingUp },
+        {
+          text: t("tabs.mediaBuyers.features.multiPixelSupport"),
+          icon: Target,
+        },
+        { text: t("tabs.mediaBuyers.features.abTesting"), icon: Zap },
       ],
       color: "from-purple-500 to-pink-600",
       demoGif: "/demo/mediabuyers.gif",
@@ -392,14 +443,14 @@ export default function ProductDemoSection() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
-              {t('title')}
+              {t("title")}
               <br />
               <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
-                {t('titleHighlight')}
+                {t("titleHighlight")}
               </span>
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
-              {t('subtitle')}
+              {t("subtitle")}
             </p>
           </motion.div>
         </div>
@@ -518,7 +569,7 @@ export default function ProductDemoSection() {
                         <div className="flex items-center gap-1 sm:gap-2">
                           <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-green-500 animate-pulse"></div>
                           <span className="text-[10px] sm:text-xs font-semibold text-gray-700">
-                            {t('liveDemo')}
+                            {t("liveDemo")}
                           </span>
                         </div>
                       </div>
@@ -564,7 +615,7 @@ export default function ProductDemoSection() {
                                         <div className="flex items-center gap-0.5 md:gap-1">
                                           <div className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-green-500"></div>
                                           <span className="text-[10px] md:text-xs text-green-600 font-medium">
-                                            {t('newOrder')}
+                                            {t("newOrder")}
                                           </span>
                                         </div>
                                       </div>
@@ -614,7 +665,7 @@ export default function ProductDemoSection() {
                                           <div className="flex items-center gap-0.5">
                                             <div className="w-1 h-1 rounded-full bg-green-500"></div>
                                             <span className="text-[10px] text-green-600 font-medium">
-                                              {t('newOrder')}
+                                              {t("newOrder")}
                                             </span>
                                           </div>
                                         </div>
@@ -828,10 +879,10 @@ export default function ProductDemoSection() {
                           );
                         })()}
                         <div className="text-lg sm:text-xl md:text-2xl font-bold mb-1.5 sm:mb-2 drop-shadow-md">
-                          {tabs[activeTab].title} {t('dashboard')}
+                          {tabs[activeTab].title} {t("dashboard")}
                         </div>
                         <div className="text-xs sm:text-sm md:text-base opacity-90 bg-white/10 backdrop-blur-sm rounded-md sm:rounded-lg px-3 sm:px-4 py-1.5 sm:py-2 inline-block">
-                          {t('comingSoon')}
+                          {t("comingSoon")}
                         </div>
                       </div>
                     </div>

@@ -346,7 +346,7 @@ export default function Header({ variant = 'transparent' }: HeaderProps) {
                 className="flex items-center justify-between px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-xl transition-all group"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <span className="font-medium">Home</span>
+                <span className="font-medium">{t('home')}</span>
                 <ChevronRight size={18} className="opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all" />
               </Link>
 
@@ -356,7 +356,7 @@ export default function Header({ variant = 'transparent' }: HeaderProps) {
                 className="flex items-center justify-between px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-xl transition-all group"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <span className="font-medium">Why Vondera</span>
+                <span className="font-medium">{t('whyVondera')}</span>
                 <ChevronRight size={18} className="opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all" />
               </Link>
               
@@ -366,7 +366,7 @@ export default function Header({ variant = 'transparent' }: HeaderProps) {
                   onClick={() => setIsProductsExpanded(!isProductsExpanded)}
                   className="w-full flex items-center justify-between px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-xl transition-all group"
                 >
-                  <span className="font-medium">Products</span>
+                  <span className="font-medium">{t('products')}</span>
                   <ChevronDown 
                     size={18} 
                     className={cn(
@@ -431,7 +431,7 @@ export default function Header({ variant = 'transparent' }: HeaderProps) {
                 className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-white hover:from-green-500/30 hover:to-emerald-500/30 rounded-xl transition-all group border border-green-500/20"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <span className="font-semibold">Media Buyers</span>
+                <span className="font-semibold">{t('mediaBuyers')}</span>
                 <ChevronRight size={18} className="opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all" />
               </Link>
 
@@ -441,7 +441,7 @@ export default function Header({ variant = 'transparent' }: HeaderProps) {
                 className="flex items-center justify-between px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-xl transition-all group"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <span className="font-medium">Pricing</span>
+                <span className="font-medium">{t('pricing')}</span>
                 <ChevronRight size={18} className="opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all" />
               </Link>
 
@@ -451,7 +451,7 @@ export default function Header({ variant = 'transparent' }: HeaderProps) {
                 className="flex items-center justify-between px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-xl transition-all group"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <span className="font-medium">Developers</span>
+                <span className="font-medium">{t('developers')}</span>
                 <ChevronRight size={18} className="opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all" />
               </Link>
 
@@ -461,7 +461,7 @@ export default function Header({ variant = 'transparent' }: HeaderProps) {
                 className="flex items-center justify-between px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-xl transition-all group"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <span className="font-medium">About</span>
+                <span className="font-medium">{t('about')}</span>
                 <ChevronRight size={18} className="opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all" />
               </Link>
             </div>
