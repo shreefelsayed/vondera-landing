@@ -1761,5 +1761,153 @@
       "localShipping": "Egyptian Shipping Integration",
       "pricing": "Transparent Pricing"
     }
+  },
+  "vpayPage": {
+    "hero": {
+      "title": "Accept Payments Everywhere",
+      "subtitle": "Seamless payment processing for your online store",
+      "getStarted": "Get Started",
+      "learnMore": "Learn More",
+      "instantSetup": "Instant setup",
+      "securePayments": "Secure payments",
+      "support247": "24/7 support"
+    },
+    "checkout": {
+      "title": "Checkout",
+      "securePayment": "Secure payment",
+      "verified": "Verified",
+      "totalAmount": "Total Amount",
+      "creditCards": "Credit & Debit Cards",
+      "creditCardsDesc": "Visa, Mastercard, Amex",
+      "digitalWallets": "Digital Wallets",
+      "digitalWalletsDesc": "Vodafone, InstaPay"
+    },
+    "features": {
+      "title": "Payment Methods",
+      "subtitle": "Accept payments your customers love",
+      "creditCardsTitle": "Credit & Debit Cards",
+      "creditCardsDesc": "Secure card payments",
+      "digitalWalletsTitle": "Digital Wallets",
+      "digitalWalletsDesc": "Mobile wallet payments"
+    }
+  },
+  "vdomainPage": {
+    "hero": {
+      "title": "Get Your Domain Today",
+      "titleHighlight": "In Egyptian Pounds",
+      "subtitle": "Register your domain with local currency. No credit card required.",
+      "searchPlaceholder": "Search for your perfect domain...",
+      "searchDomain": "Search Domain",
+      "getStarted": "Get Started",
+      "note": "Pay with Egyptian Pounds • No international fees"
+    },
+    "domains": {
+      "title": "Popular Domains",
+      "subtitle": "Choose from our most popular domain extensions",
+      "perYear": "/year",
+      "needDifferent": "Need a different extension?",
+      "searchMore": "Search for more domains"
+    },
+    "benefits": {
+      "title": "Buy Your Domain",
+      "titleHighlight": "No Credit Card Required",
+      "subtitle": "Purchase domains easily with local payment methods",
+      "paymentMethods": "Flexible Payment Options",
+      "localCurrency": "Local currency pricing",
+      "bankTransfer": "Bank Transfer",
+      "instapay": "Instapay"
+    }
+  },
+  "vmediaPage": {
+    "hero": {
+      "title": "Find Top",
+      "titleHighlight": "Media Buyers",
+      "subtitle": "Connect with verified media buyers to scale your e-commerce business"
+    },
+    "leaderboard": {
+      "title": "Top Performers This Month",
+      "subtitle": "Verified media buyers ranked by performance"
+    }
+  },
+  "vcommunityPage": {
+    "hero": {
+      "title": "Stop Googling.",
+      "titleHighlight": "Ask Real Merchants",
+      "subtitle": "Join thousands of e-commerce merchants sharing real experiences, solutions, and advice"
+    },
+    "stats": {
+      "merchants": "Active Merchants",
+      "discussions": "Discussions",
+      "solutions": "Solutions Shared"
+    },
+    "featured": {
+      "title": "Featured Discussions",
+      "subtitle": "Top conversations from the community"
+    },
+    "activity": {
+      "title": "Live Activity Feed"
+    },
+    "cta": {
+      "title": "Ready to Join?",
+      "subtitle": "Start getting real answers from real merchants",
+      "join": "Join Community",
+      "free": "Free Forever"
+    }
+  },
+  "vfunnelPage": {
+    "hero": {
+      "title": "Build Funnels That Actually Convert",
+      "subtitle": "Optimized sales funnels designed specifically for Egyptian e-commerce",
+      "getStarted": "Get Started Free",
+      "viewDemo": "View Demo",
+      "note": "Used by 5,000+ Egyptian stores"
+    },
+    "stats": {
+      "conversion": "Higher Conversion",
+      "conversionDesc": "vs regular pages",
+      "aov": "Average Order Value",
+      "aovDesc": "with upsells"
+    },
+    "liveUpdates": {
+      "title": "Live from Egyptian Stores",
+      "conversionUpdates": "Live Conversion Updates"
+    },
+    "results": {
+      "title": "Real Results From Egyptian Stores",
+      "subtitle": "See how merchants are crushing it with VFunnel",
+      "comparedTo": "Compared to regular product pages",
+      "thanks": "Thanks to one-click upsells"
+    }
+  },
+  "vinboxPage": {
+    "hero": {
+      "title": "Stop Losing Sales",
+      "titleHighlight": "From Slow Replies",
+      "subtitle": "Manage all your customer messages in one inbox. Reply 3x faster."
+    },
+    "features": {
+      "title": "Everything In One Place",
+      "subtitle": "Never miss a customer message again",
+      "replyFaster": "Reply 3x Faster",
+      "replyFasterDesc": "Average response time drops from 45 minutes to 12 minutes",
+      "autoReplies": "Smart Auto-Replies",
+      "autoRepliesDesc": "Handle 60% of questions automatically while you sleep"
+    },
+    "liveMessages": {
+      "title": "Live Messages"
+    },
+    "platforms": {
+      "title": "Connect All Your Platforms",
+      "subtitle": "One inbox for Facebook, Instagram, WhatsApp, and more"
+    }
+  },
+  "common": {
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "viewDemo": "View Demo",
+    "comingSoon": "Coming Soon",
+    "free": "Free",
+    "perMonth": "per month",
+    "perYear": "per year"
   }
 }

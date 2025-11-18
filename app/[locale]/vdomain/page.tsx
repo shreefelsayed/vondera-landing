@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Globe, Search, Lock, Zap, CreditCard, MapPin, Check, ArrowRight, Shield, TrendingUp, RefreshCw, DollarSign } from 'lucide-react';
 import Header from '@/components/layout/Header';
@@ -9,6 +9,7 @@ import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
 
 export default function VDomainPage() {
+  const t = useTranslations('vdomainPage');
   const locale = useLocale();
   const isRTL = locale === 'ar';
 
