@@ -1,5 +1,5 @@
 'use client';
-
+//
 import { useEffect, useState, useRef } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
