@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Zap, BarChart3, Palette, TestTube2, MousePointerClick, Layers, ArrowRight, TrendingUp, Target, Sparkles } from 'lucide-react';
@@ -44,6 +44,7 @@ const ConversionItem = ({ store, improvement, metric, icon }: ConversionUpdate) 
 };
 
 export default function VFunnelPage() {
+  const t = useTranslations('vfunnelPage');
   const locale = useLocale();
   const isRTL = locale === 'ar';
 

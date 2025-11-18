@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Inbox, MessageSquare, Users, Zap, Tag, Clock, ArrowRight, CheckCircle2, Timer, Bot } from 'lucide-react';
@@ -50,6 +50,7 @@ const MessageItem = ({ customer, platform, message, time, status }: InboxMessage
 };
 
 export default function VInboxPage() {
+  const t = useTranslations('vinboxPage');
   const locale = useLocale();
   const isRTL = locale === 'ar';
 

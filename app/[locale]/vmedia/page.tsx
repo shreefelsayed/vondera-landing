@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Users, TrendingUp, DollarSign, Star, Shield, Target, ArrowRight, Phone, Mail } from 'lucide-react';
@@ -11,6 +11,7 @@ import { Badge } from '@/components/ui/Badge';
 import { AnimatedList } from '@/components/ui/animated-list';
 
 export default function VMediaPage() {
+  const t = useTranslations('vmediaPage');
   const locale = useLocale();
   const isRTL = locale === 'ar';
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Users2, MessageCircle, Lightbulb, Award, TrendingUp, BookOpen, ArrowRight, Heart, Share2, MessageSquare, ThumbsUp, Eye, Clock, TrendingUpIcon, Sparkles, CheckCircle2, Star } from 'lucide-react';
@@ -67,6 +67,7 @@ const CommunityActivityItem = ({ name, action, topic, time, icon }: CommunityAct
 };
 
 export default function VCommunityPage() {
+  const t = useTranslations('vcommunityPage');
   const locale = useLocale();
   const isRTL = locale === 'ar';
 

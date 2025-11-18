@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Check, X, DollarSign, Globe, Headphones, Zap, Award, Users } from 'lucide-react';
 import Header from '@/components/layout/Header';
@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/Badge';
 import Link from 'next/link';
 
 export default function ShopifyAlternativePage() {
+  const t = useTranslations('shopifyPage');
   const locale = useLocale();
   const isRTL = locale === 'ar';
 
