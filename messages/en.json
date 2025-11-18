@@ -60,7 +60,19 @@
     "contact": "Contact",
     "vmedia": "VMedia",
     "login": "Login",
-    "signup": "Sign Up"
+    "signup": "Sign Up",
+    "whyVondera": "Why Vondera",
+    "solution": "Solutions",
+    "mediaBuyers": "Media Buyers",
+    "developers": "Developers",
+    "vpay": "VPay",
+    "vdomain": "VDomain",
+    "vinbox": "VInbox",
+    "vfunnel": "VFunnel",
+    "vcommunity": "VCommunity",
+    "vsupply": "VSupply",
+    "vship": "VShip",
+    "vstore": "VStore"
   },
   "hero": {
     "title": "We Make E-commerce Much Easier",
@@ -82,46 +94,51 @@
     "title": "Why Merchants Choose",
     "titleHighlight": "Vondera Over Others",
     "subtitle": "Compare Vondera with leading e-commerce platforms and see why we're the best choice for MENA",
-    "vsButton": "vs",
+    "vsShopify": "vs Shopify",
+    "vsWooCommerce": "vs WooCommerce",
     "feature": "Feature",
     "recommended": "Recommended",
-    "footerText": "Join 10,000+ merchants who switched to Vondera",
-    "footerCta": "Start Your Free Trial",
-    "footerNote": "No credit card required • 14-day free trial • Cancel anytime",
-    "whySwitch": "Why Merchants Switch to Vondera",
-    "reasons": {
-      "save": {
-        "title": "Save 60%",
-        "description": "Lower costs without compromising on features"
-      },
-      "mena": {
-        "title": "MENA-First",
-        "description": "Built specifically for Arabic-speaking merchants"
-      },
-      "vmedia": {
-        "title": "VMedia Access",
-        "description": "Exclusive marketplace for media buyers"
-      }
-    },
     "features": {
       "startingPrice": "Starting Price",
       "arabicInterface": "Arabic Interface",
       "rtlSupport": "RTL Support",
-      "localPayment": "Local Payment Gateways",
-      "mediaBuyer": "Media Buyer Marketplace",
+      "localPaymentGateways": "Local Payment Gateways",
+      "mediaBuyerMarketplace": "Media Buyer Marketplace",
       "freeThemes": "Free Themes",
       "mobileApps": "Mobile Apps",
       "transactionFees": "Transaction Fees",
       "support247": "24/7 Support",
-      "multiChannel": "Multi-Channel Selling",
-      "socialMedia": "Social Media Integration",
-      "builtMena": "Built for MENA"
+      "multiChannelSelling": "Multi-Channel Selling",
+      "socialMediaIntegration": "Social Media Integration",
+      "builtForMENA": "Built for MENA"
     },
     "values": {
       "limited": "Limited",
       "pluginsRequired": "Plugins Required",
       "paidPlans": "Paid Plans",
       "community": "Community"
+    },
+    "footer": {
+      "joinMerchants": "Join 10,000+ merchants who switched to Vondera",
+      "startTrial": "Start Your Free Trial",
+      "noCredit": "No credit card required",
+      "freeTrial": "14-day free trial",
+      "cancelAnytime": "Cancel anytime"
+    },
+    "switchReasons": {
+      "title": "Why Merchants Switch to Vondera",
+      "save60": {
+        "title": "Save 60%",
+        "description": "Lower costs without compromising on features"
+      },
+      "menaFirst": {
+        "title": "MENA-First",
+        "description": "Built specifically for Arabic-speaking merchants"
+      },
+      "vmediaAccess": {
+        "title": "VMedia Access",
+        "description": "Exclusive marketplace for media buyers"
+      }
     }
   },
   "mediaBuyerBanner": {
@@ -551,20 +568,41 @@
     "toMiddleEast": "to the Middle East"
   },
   "footer": {
-    "tagline": "We Make E-commerce Much Easier",
+    "tagline": "The all-in-one e-commerce platform empowering Egyptian businesses to grow, scale, and succeed in the digital marketplace.",
+    "trustedBy": "Trusted by 10,000+ merchants",
+    "connectWithUs": "Connect With Us",
+    "sections": "Sections",
+    "process": "Process",
+    "services": "Services",
+    "benefits": "Benefits",
+    "plans": "Plans",
+    "contact": "Contact",
+    "pages": "Pages",
+    "home": "Home",
+    "aboutUs": "About Us",
+    "blogs": "Blog",
+    "tutorials": "Tutorials",
+    "careers": "Careers",
+    "developers": "Developers",
+    "partners": "Partners",
+    "investment": "Investment",
     "products": "Products",
-    "company": "Company",
-    "resources": "Resources",
-    "legal": "Legal",
-    "newsletter": {
-      "title": "Subscribe to our newsletter",
-      "placeholder": "Enter your email",
-      "button": "Subscribe"
-    },
-    "copyright": "© 2025 Vondera. All rights reserved.",
-    "address": "Dokki, Giza, Egypt",
-    "email": "Info@vondera.app",
-    "phone": "+20 10 70068383"
+    "vpay": "VPay",
+    "vdomain": "VDomain",
+    "vmedia": "VMedia",
+    "vinbox": "VInbox",
+    "vfunnel": "VFunnel",
+    "vcommunity": "VCommunity",
+    "vsupply": "VSupply",
+    "vship": "VShip",
+    "vstore": "VStore",
+    "contactUs": "Contact Us",
+    "emailLabel": "Email",
+    "email": "info@vondera.app",
+    "phoneLabel": "Phone",
+    "phone": "+20 10 70068383",
+    "addressLabel": "Address",
+    "address": "b5105 - Creativa Innovation Hub\nGiza, Egypt"
   },
   "vpay": {
     "meta": {
