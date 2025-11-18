@@ -299,16 +299,15 @@ export default function VCommunityPage() {
               </Badge>
               
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
-                <span className="text-gray-900">Stop Googling.</span>
+                <span className="text-gray-900">{t('hero.title')}</span>
                 <br />
                 <span className="text-primary-600">
-                  Ask Real Merchants.
+                  {t('hero.titleHighlight')}
                 </span>
               </h1>
               
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto px-4">
-                Egypt's largest e-commerce community. Real advice from sellers running real businesses. 
-                <span className="font-semibold text-gray-900"> No BS, just results.</span>
+                {t('hero.subtitle')}
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-4">

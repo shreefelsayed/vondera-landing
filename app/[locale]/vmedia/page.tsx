@@ -177,14 +177,14 @@ export default function VMediaPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              <span className="text-gray-900">Find Top </span>
+              <span className="text-gray-900">{t('hero.title')} </span>
               <motion.span 
                 className="block text-white"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
               >
-                Media Buyers
+                {t('hero.titleHighlight')}
               </motion.span>
             </motion.h1>
             
@@ -194,7 +194,7 @@ export default function VMediaPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              Scale your e-commerce with proven experts
+              {t('hero.subtitle')}
             </motion.p>
             
             <motion.div 
@@ -245,13 +245,13 @@ export default function VMediaPage() {
             className="text-center mb-12"
           >
             <Badge variant="vmedia" className="mb-4">
-              Top Performers
+              {t('leaderboard.title')}
             </Badge>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Top Media Buyers This Month
+              {t('leaderboard.title')}
             </h2>
             <p className="text-lg md:text-xl text-gray-600">
-              Leading experts scaling Egyptian e-commerce
+              {t('leaderboard.subtitle')}
             </p>
           </motion.div>
 
