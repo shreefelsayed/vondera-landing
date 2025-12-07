@@ -1,4 +1,46 @@
 {
+  "seo": {
+    "home": {
+      "title": "Vondera - Best E-commerce Platform in Egypt & MENA | Arabic Shopify Alternative",
+      "description": "Build your online store with Vondera, the #1 e-commerce platform in Egypt and MENA. 10,000+ merchants trust us. Starting at 300 EGP/month. Free trial available!",
+      "keywords": "e-commerce platform Egypt, online store builder, Shopify alternative Arabic, MENA e-commerce, create online store Egypt, best e-commerce platform Middle East, Arabic online store builder, VMedia marketplace, payment gateway Egypt, inventory management",
+      "og": {
+        "title": "Vondera - #1 E-commerce Platform for Egyptian & MENA Merchants",
+        "description": "Join 10,000+ successful online stores. Build, manage, and scale your e-commerce business with Vondera. Starting at only 300 EGP/month.",
+        "imageAlt": "Vondera E-commerce Platform - Build Your Online Store"
+      },
+      "twitter": {
+        "title": "Vondera - Best E-commerce Platform in Egypt & MENA",
+        "description": "The Arabic alternative to Shopify. Built for MENA merchants. 10,000+ active stores, 99.9% uptime, 24/7 support."
+      }
+    },
+    "faqs": {
+      "question1": {
+        "q": "What is Vondera?",
+        "a": "Vondera is an all-in-one e-commerce platform designed specifically for the MENA region. We provide everything you need to build, manage, and scale your online store, including website builder, inventory management, payment processing (VPay), shipping integration, and our unique VMedia marketplace that connects you with professional media buyers."
+      },
+      "question2": {
+        "q": "How is Vondera different from Shopify?",
+        "a": "Vondera is tailored specifically for the MENA market with features Shopify doesn't offer: local payment methods (Vodafone Cash, Orange Money, InstaPay), full Arabic language support with RTL, significantly lower pricing starting at 300 EGP/month, VMedia marketplace connecting you with local media buyers, and 24/7 Arabic-speaking customer support."
+      },
+      "question3": {
+        "q": "What is VMedia and how does it help my business?",
+        "a": "VMedia is our exclusive media buying marketplace that connects over 10,000 merchants with 500+ professional media buyers. Instead of struggling to find reliable advertisers, you can browse verified media buyers, compare their performance metrics, review portfolios, and hire the perfect expert for your advertising campaigns."
+      },
+      "question4": {
+        "q": "Do you have mobile apps for managing my store?",
+        "a": "Yes! We offer full-featured mobile apps for both iOS (16+) and Android with 50,000+ downloads and 4.5★ rating. Manage your entire store on the go: process orders, track inventory, respond to customer messages, view analytics, and collaborate with your team from anywhere, anytime."
+      },
+      "question5": {
+        "q": "What payment methods does Vondera support?",
+        "a": "Through VPay, our integrated payment gateway, we support all major payment methods for the MENA region: credit/debit cards (VISA, Mastercard, AMEX), digital wallets (Vodafone Cash, Orange Money, WE Pay, InstaPay), bank transfers, and cash on delivery (COD) with automated collection tracking."
+      },
+      "question6": {
+        "q": "How much does Vondera cost?",
+        "a": "Vondera pricing starts at only 300 EGP/month, making it one of the most affordable e-commerce platforms in the MENA region. We offer flexible plans that scale with your business. All plans include 24/7 support, 99.9% uptime guarantee, and access to our full ecosystem of tools including VPay, VMedia, VFunnel, and more. Start with a free trial!"
+      }
+    }
+  },
   "common": {
     "getStarted": "Get Started",
     "startFreeTrial": "Start Free Trial",
@@ -9,6 +51,7 @@
     "viewAll": "View All"
   },
   "nav": {
+    "home": "Home",
     "features": "Features",
     "pricing": "Pricing",
     "products": "Products",
@@ -18,7 +61,19 @@
     "contact": "Contact",
     "vmedia": "VMedia",
     "login": "Login",
-    "signup": "Sign Up"
+    "signup": "Sign Up",
+    "whyVondera": "Why Vondera",
+    "solution": "Solutions",
+    "mediaBuyers": "Media Buyers",
+    "developers": "Developers",
+    "vpay": "VPay",
+    "vdomain": "VDomain",
+    "vinbox": "VInbox",
+    "vfunnel": "VFunnel",
+    "vcommunity": "VCommunity",
+    "vsupply": "VSupply",
+    "vship": "VShip",
+    "vstore": "VStore"
   },
   "hero": {
     "title": "We Make E-commerce Much Easier",
@@ -34,52 +89,57 @@
     "title": "Be the next",
     "subtitle": "Dream big, build fast, and grow far on Vondera.",
     "cta": "Start for free",
-    "whyVondera": "Why we build Vondera"
+    "whyVondera": "Are you media buyer?"
   },
   "comparison": {
     "title": "Why Merchants Choose",
     "titleHighlight": "Vondera Over Others",
     "subtitle": "Compare Vondera with leading e-commerce platforms and see why we're the best choice for MENA",
-    "vsButton": "vs",
+    "vsShopify": "vs Shopify",
+    "vsWooCommerce": "vs WooCommerce",
     "feature": "Feature",
     "recommended": "Recommended",
-    "footerText": "Join 10,000+ merchants who switched to Vondera",
-    "footerCta": "Start Your Free Trial",
-    "footerNote": "No credit card required • 14-day free trial • Cancel anytime",
-    "whySwitch": "Why Merchants Switch to Vondera",
-    "reasons": {
-      "save": {
-        "title": "Save 60%",
-        "description": "Lower costs without compromising on features"
-      },
-      "mena": {
-        "title": "MENA-First",
-        "description": "Built specifically for Arabic-speaking merchants"
-      },
-      "vmedia": {
-        "title": "VMedia Access",
-        "description": "Exclusive marketplace for media buyers"
-      }
-    },
     "features": {
       "startingPrice": "Starting Price",
       "arabicInterface": "Arabic Interface",
       "rtlSupport": "RTL Support",
-      "localPayment": "Local Payment Gateways",
-      "mediaBuyer": "Media Buyer Marketplace",
+      "localPaymentGateways": "Local Payment Gateways",
+      "mediaBuyerMarketplace": "Media Buyer Marketplace",
       "freeThemes": "Free Themes",
       "mobileApps": "Mobile Apps",
       "transactionFees": "Transaction Fees",
       "support247": "24/7 Support",
-      "multiChannel": "Multi-Channel Selling",
-      "socialMedia": "Social Media Integration",
-      "builtMena": "Built for MENA"
+      "multiChannelSelling": "Multi-Channel Selling",
+      "socialMediaIntegration": "Social Media Integration",
+      "builtForMENA": "Built for MENA"
     },
     "values": {
       "limited": "Limited",
       "pluginsRequired": "Plugins Required",
       "paidPlans": "Paid Plans",
       "community": "Community"
+    },
+    "footer": {
+      "joinMerchants": "Join 10,000+ merchants who switched to Vondera",
+      "startTrial": "Start Your Free Trial",
+      "noCredit": "No credit card required",
+      "freeTrial": "14-day free trial",
+      "cancelAnytime": "Cancel anytime"
+    },
+    "switchReasons": {
+      "title": "Why Merchants Switch to Vondera",
+      "save60": {
+        "title": "Save 60%",
+        "description": "Lower costs without compromising on features"
+      },
+      "menaFirst": {
+        "title": "MENA-First",
+        "description": "Built specifically for Arabic-speaking merchants"
+      },
+      "vmediaAccess": {
+        "title": "VMedia Access",
+        "description": "Exclusive marketplace for media buyers"
+      }
     }
   },
   "mediaBuyerBanner": {
@@ -118,6 +178,176 @@
     "rating": "4.5★ Rating",
     "downloads": "50,000+ Downloads",
     "platforms": "Available on iOS 16+ and Android"
+  },
+  "productDemo": {
+    "title": "Everything You Need,",
+    "titleHighlight": "All in One Platform",
+    "subtitle": "Explore our powerful features designed to streamline your e-commerce operations",
+    "liveDemo": "Live Demo",
+    "newOrder": "New Order",
+    "dashboard": "Dashboard",
+    "comingSoon": "Interactive demo coming soon",
+    "tabs": {
+      "websiteBuilder": {
+        "title": "Website Builder",
+        "description": "Create stunning online stores",
+        "subtitle": "Build your dream website without coding",
+        "features": {
+          "dragDrop": "Drag & drop builder",
+          "mobileResponsive": "Mobile responsive",
+          "seoOptimized": "SEO optimized",
+          "customTemplates": "Custom templates"
+        }
+      },
+      "funnelBuilder": {
+        "title": "Funnel Builder",
+        "description": "Convert visitors into customers",
+        "subtitle": "Build high-converting sales funnels",
+        "features": {
+          "preBuilt": "Pre-built templates",
+          "abTesting": "A/B testing",
+          "analytics": "Analytics tracking",
+          "upsell": "Upsell & downsell"
+        }
+      },
+      "socialInbox": {
+        "title": "Social Inbox",
+        "description": "Manage all conversations",
+        "subtitle": "Unified inbox for all social media",
+        "features": {
+          "multiPlatform": "Multi-platform support",
+          "aiPowered": "AI-powered responses",
+          "teamCollaboration": "Team collaboration",
+          "autoResponses": "Auto-responses"
+        }
+      },
+      "orders": {
+        "title": "Orders",
+        "description": "Complete order management system",
+        "subtitle": "Process, track, and fulfill orders effortlessly",
+        "features": {
+          "realTimeTracking": "Real-time order tracking",
+          "bulkProcessing": "Bulk order processing",
+          "automatedFulfillment": "Automated fulfillment",
+          "customStatuses": "Custom statuses & workflows"
+        }
+      },
+      "teamManagement": {
+        "title": "Team Management",
+        "description": "Collaborate with your team",
+        "subtitle": "Manage roles, permissions & productivity",
+        "features": {
+          "roleBasedAccess": "Role-based access",
+          "activityTracking": "Activity tracking",
+          "performanceMetrics": "Performance metrics",
+          "teamChat": "Team chat"
+        }
+      },
+      "inventory": {
+        "title": "Inventory",
+        "description": "Smart stock management",
+        "subtitle": "Never run out of stock again",
+        "features": {
+          "multiWarehouse": "Multi-warehouse support",
+          "lowStockAlerts": "Low stock alerts",
+          "batchTracking": "Batch tracking",
+          "autoReordering": "Auto-reordering"
+        }
+      },
+      "community": {
+        "title": "Community",
+        "description": "Build a loyal community",
+        "subtitle": "Engage and grow your audience",
+        "features": {
+          "memberForums": "Member forums",
+          "exclusiveContent": "Exclusive content",
+          "badgesRewards": "Badges & rewards",
+          "eventsWebinars": "Events & webinars"
+        }
+      },
+      "domains": {
+        "title": "Domains",
+        "description": "Manage your domains",
+        "subtitle": "Connect custom domains easily",
+        "features": {
+          "customDomain": "Custom domain setup",
+          "sslCertificates": "SSL certificates",
+          "dnsManagement": "DNS management",
+          "subdomainSupport": "Subdomain support"
+        }
+      },
+      "shipping": {
+        "title": "Shipping",
+        "description": "Smart shipping solutions",
+        "subtitle": "Automate your shipping process",
+        "features": {
+          "multiCarrier": "Multi-carrier integration",
+          "realTimeTracking": "Real-time tracking",
+          "automatedLabels": "Automated labels",
+          "rateComparison": "Rate comparison"
+        }
+      },
+      "payments": {
+        "title": "Payments",
+        "description": "Secure payment processing",
+        "subtitle": "Accept payments from anywhere",
+        "features": {
+          "multiplePaymentMethods": "Multiple payment methods",
+          "secureTransactions": "Secure transactions",
+          "instantPayouts": "Instant payouts",
+          "fraudProtection": "Fraud protection"
+        }
+      },
+      "mediaBuyers": {
+        "title": "Media Buyers",
+        "description": "Scale your ad campaigns",
+        "subtitle": "Tools built for media buyers",
+        "features": {
+          "campaignTracking": "Campaign tracking",
+          "roiAnalytics": "ROI analytics",
+          "multiPixelSupport": "Multi-pixel support",
+          "abTesting": "A/B testing"
+        }
+      }
+    },
+    "orderNotifications": {
+      "order1": {
+        "customer": "Ahmed Hassan",
+        "amount": "245 EGP",
+        "product": "Nike Air Max",
+        "time": "Just now"
+      },
+      "order2": {
+        "customer": "Sara Mohammed",
+        "amount": "189 EGP",
+        "product": "Wireless Headphones",
+        "time": "2 min ago"
+      },
+      "order3": {
+        "customer": "Khaled Ali",
+        "amount": "567 EGP",
+        "product": "Smart Watch Pro",
+        "time": "5 min ago"
+      },
+      "order4": {
+        "customer": "Layla Ibrahim",
+        "amount": "320 EGP",
+        "product": "Designer Handbag",
+        "time": "8 min ago"
+      },
+      "order5": {
+        "customer": "Omar Youssef",
+        "amount": "445 EGP",
+        "product": "Gaming Mouse",
+        "time": "12 min ago"
+      },
+      "order6": {
+        "customer": "Fatima Abdullah",
+        "amount": "890 EGP",
+        "product": "Premium Perfume",
+        "time": "15 min ago"
+      }
+    }
   },
   "features": {
     "title": "Everything You Need to Succeed Online",
@@ -214,11 +444,91 @@
     "title": "Simple, Transparent Pricing",
     "subtitle": "Choose the perfect plan for your business",
     "monthly": "Monthly",
-    "yearly": "Yearly",
-    "perMonth": "/month",
+    "3months": "3 Months",
+    "6months": "6 Months",
+    "yearly": "12 Months",
+    "perMonth": "per month",
+    "every3Months": "every 3 months",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
     "startingFrom": "Starting from",
     "guarantee": "3-day money-back guarantee",
-    "cta": "Start Free Trial"
+    "cta": "Start Free Trial",
+    "mostPopular": "Most Popular",
+    "getStarted": "Get Started",
+    "save": "Save {percentage}%",
+    "featuresComparison": "Features Comparison",
+    "popular": "Popular",
+    "plans": {
+      "starter": "Starter",
+      "plus": "Plus",
+      "pro": "Pro"
+    },
+    "sliderLabels": {
+      "monthly": "Monthly",
+      "3m": "3M",
+      "6m": "6M",
+      "12m": "12M"
+    },
+    "features": {
+      "hostingSSL": "Hosting & SSL",
+      "productsCount": "Products Count",
+      "ordersCount": "Orders Count",
+      "domainManagement": "Domain Management",
+      "websiteBuilder": "Website Builder",
+      "paymentGateways": "Payment Gateways",
+      "shippingPartners": "Shipping Partners",
+      "productReviews": "Product Reviews",
+      "importProducts": "Import Products (Shopify/WooCommerce)",
+      "analyticsReports": "Analytics & Reports",
+      "customerManagement": "Customer Management Tools",
+      "accessMediaBuyers": "Access Vondera Media Buyers",
+      "communityAccess": "Community Access",
+      "expenseProfitTracking": "Expense & Profit Tracking",
+      "productOffers": "Product Offers",
+      "funnelsBuilder": "Funnels Builder",
+      "popupBuilder": "Popup Builder",
+      "customHTMLPages": "Custom HTML Pages",
+      "catalogSyncMeta": "Catalog Sync with Meta",
+      "pixelConversionTracking": "Pixel & Conversion Tracking",
+      "multiLanguageCurrency": "Multi-language & Currency",
+      "orderRiskSystem": "Order Risk System",
+      "vinbox": "Vinbox (Unified Inbox)",
+      "abandonedCartRecovery": "Abandoned Cart Recovery",
+      "emailCampaigns": "Email Campaigns",
+      "apiAccess": "API Access",
+      "liveView": "Live View (Visitors in Real Time)",
+      "removeBranding": "Remove 'Powered by Vondera' Branding",
+      "teamAccess": "Team Access",
+      "customerSupport": "Customer Support"
+    },
+    "featureValues": {
+      "unlimited": "Unlimited",
+      "onlyPurchaseViaVondera": "Only Purchase via Vondera",
+      "customDomain": "+ Custom Domain",
+      "basicThemes": "Basic Themes",
+      "premiumThemes": "Premium Themes",
+      "allThemesFullCustomization": "All Themes + Full Customization",
+      "vpay": "VPay",
+      "customGateways": "+ Custom Gateways",
+      "turbo": "Turbo",
+      "customCouriers": "+ Custom Couriers",
+      "basicOverview": "Basic (Overview)",
+      "advancedReports": "+ Advanced Reports",
+      "export": "+ Export",
+      "basic": "Basic",
+      "ban": "+ Ban",
+      "multiLanguage": "+ Multi Language",
+      "multiCountrySupport": "+ Multi-country Support",
+      "metaPartnerAuto": "Meta Partner Auto",
+      "custom": "Custom",
+      "3Staff": "3 Staff",
+      "5Staff": "5 Staff",
+      "15Staff": "15 Staff",
+      "emailChatBusinessHours": "Email & Chat (Business Hours)",
+      "24_7ChatWhatsApp": "24/7 Chat & WhatsApp",
+      "dedicatedAccountManager": "Dedicated Account Manager"
+    }
   },
   "investment": {
     "hero": {
@@ -308,6 +618,23 @@
       "cta": "Become a Partner",
       "contact": "Contact Us"
     },
+    "fallbackMerchants": [
+      "FashionHub",
+      "TechStore",
+      "BeautyBox",
+      "GadgetWorld",
+      "StyleMart",
+      "EliteShop",
+      "MegaStore",
+      "TrendyGoods",
+      "PrimeDeals",
+      "UrbanStyle",
+      "ModernLiving",
+      "SmartBuy",
+      "LuxuryLife",
+      "QuickShop",
+      "BestChoice"
+    ],
     "benefits": {
       "badge": "Why Partner with Us",
       "title": "Partnership Benefits",
@@ -508,21 +835,69 @@
     "egypt": "Egypt",
     "toMiddleEast": "to the Middle East"
   },
+  "socialProof": {
+    "title": "Loved by Thousands",
+    "titleHighlight": "of Merchants",
+    "subtitle": "See what merchants are saying about their experience with Vondera",
+    "loading": "Loading reviews...",
+    "ctaText": "Join 10,000+ satisfied merchants growing their business with Vondera",
+    "ctaButton": "Start Your Free Trial",
+    "ctaDisclaimer": "No credit card required • 14-day free trial",
+    "fallbackTestimonials": [
+      {
+        "name": "Ahmed Hassan",
+        "storeName": "Fashion Store",
+        "review": "Vondera transformed my business! I went from 50 orders per day to over 300. The VMedia marketplace connected me with incredible media buyers."
+      },
+      {
+        "name": "Sara Mohamed",
+        "storeName": "Beauty Products",
+        "review": "Just hit $100K in monthly revenue using Vondera! The analytics and automation tools are game-changers. Best decision ever!"
+      }
+    ]
+  },
   "footer": {
-    "tagline": "We Make E-commerce Much Easier",
+    "tagline": "The all-in-one e-commerce platform empowering Egyptian businesses to grow, scale, and succeed in the digital marketplace.",
+    "trustedBy": "Trusted by 10,000+ merchants",
+    "connectWithUs": "Connect With Us",
+    "comingSoon": "Coming Soon",
+    "soon": "Soon",
+    "sections": "Sections",
+    "process": "Process",
+    "services": "Services",
+    "benefits": "Benefits",
+    "plans": "Plans",
+    "contact": "Contact",
+    "pages": "Pages",
+    "home": "Home",
+    "aboutUs": "About Us",
+    "blogs": "Blog",
+    "tutorials": "Tutorials",
+    "careers": "Careers",
+    "developers": "Developers",
+    "partners": "Partners",
+    "investment": "Investment",
     "products": "Products",
-    "company": "Company",
-    "resources": "Resources",
-    "legal": "Legal",
-    "newsletter": {
-      "title": "Subscribe to our newsletter",
-      "placeholder": "Enter your email",
-      "button": "Subscribe"
-    },
-    "copyright": "© 2025 Vondera. All rights reserved.",
-    "address": "Dokki, Giza, Egypt",
-    "email": "Info@vondera.app",
-    "phone": "+20 10 70068383"
+    "vpay": "VPay",
+    "vdomain": "VDomain",
+    "vmedia": "VMedia",
+    "vinbox": "VInbox",
+    "vfunnel": "VFunnel",
+    "vcommunity": "VCommunity",
+    "vsupply": "VSupply",
+    "vship": "VShip",
+    "vstore": "VStore",
+    "contactUs": "Contact Us",
+    "emailLabel": "Email",
+    "email": "info@vondera.app",
+    "phoneLabel": "Phone",
+    "phone": "+20 10 70068383",
+    "addressLabel": "Address",
+    "address": "b5105 - Creativa Innovation Hub\nGiza, Egypt",
+    "copyright": "© {year} Vondera.",
+    "empoweringEcommerce": "Empowering e-commerce",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
   },
   "vpay": {
     "meta": {
@@ -1228,5 +1603,311 @@
     "common": {
       "learnMore": "Learn More"
     }
+  },
+  "aboutPage": {
+    "vision": {
+      "text1": "We are a group of entrepreneurs building an E-commerce OS. We will help all brands make a lot of sales through our solution. We once had our own brand, and we know the gaps. We are the next unicorn startup in Egypt. We started in 2025 and we have a lot to build.",
+      "text2": "From Same People to Same People"
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "subtitle": "The passionate people behind Vondera, working hard to make e-commerce accessible to everyone."
+    }
+  },
+  "contactPage": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    },
+    "info": {
+      "email": "Email Us",
+      "phone": "Call Us",
+      "address": "Visit Us",
+      "hours": "Business Hours",
+      "hoursValue": "Sunday - Thursday: 9:00 AM - 6:00 PM"
+    }
+  },
+  "careersPage": {
+    "title": "Join Our Team",
+    "subtitle": "Build the future of e-commerce with us",
+    "filterBy": "Filter by Department",
+    "allPositions": "All Positions",
+    "viewDetails": "View Details",
+    "nowHiring": "Now Hiring",
+    "tryAgain": "Try Again",
+    "noJobsTitle": "No Open Positions",
+    "noJobsText": "We don't have any open positions at the moment, but we're always looking for talented people.",
+    "sendResume": "Send your resume to",
+    "loading": "Loading positions...",
+    "error": "Failed to load positions"
+  },
+  "blogPage": {
+    "title": "Latest from Vondera",
+    "subtitle": "Tips, insights, and updates from our team",
+    "readMore": "Read More",
+    "featured": "Featured",
+    "loading": "Loading articles...",
+    "noArticles": "No articles found",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated",
+    "intro": "Your privacy is important to us. This Privacy Policy explains how Vondera collects, uses, and protects your personal information.",
+    "sections": {
+      "collection": {
+        "title": "Information We Collect",
+        "content": "We collect information you provide directly to us, including name, email, phone number, and business details when you register for our services."
+      },
+      "usage": {
+        "title": "How We Use Your Information",
+        "content": "We use your information to provide, maintain, and improve our services, process transactions, send updates, and respond to your requests."
+      },
+      "sharing": {
+        "title": "Information Sharing",
+        "content": "We do not sell your personal information. We may share your information with service providers who assist in operating our platform."
+      },
+      "security": {
+        "title": "Data Security",
+        "content": "We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, or destruction."
+      },
+      "rights": {
+        "title": "Your Rights",
+        "content": "You have the right to access, correct, or delete your personal information. Contact us at info@vondera.app for any privacy-related requests."
+      }
+    }
+  },
+  "termsPage": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated",
+    "intro": "Please read these Terms of Service carefully before using Vondera's platform.",
+    "sections": {
+      "acceptance": {
+        "title": "Acceptance of Terms",
+        "content": "By accessing or using Vondera, you agree to be bound by these Terms of Service and all applicable laws and regulations."
+      },
+      "services": {
+        "title": "Our Services",
+        "content": "Vondera provides an e-commerce platform including website building, payment processing, inventory management, and related services."
+      },
+      "account": {
+        "title": "Account Responsibilities",
+        "content": "You are responsible for maintaining the confidentiality of your account credentials and for all activities under your account."
+      },
+      "payments": {
+        "title": "Payments and Fees",
+        "content": "Pricing and payment terms are available on our pricing page. All fees are in Egyptian Pounds unless otherwise specified."
+      },
+      "termination": {
+        "title": "Termination",
+        "content": "We may suspend or terminate your access to our services if you violate these Terms or engage in fraudulent activity."
+      },
+      "liability": {
+        "title": "Limitation of Liability",
+        "content": "Vondera shall not be liable for any indirect, incidental, or consequential damages arising from your use of our services."
+      }
+    }
+  },
+  "refundPage": {
+    "title": "Refund Policy",
+    "lastUpdated": "Last updated",
+    "intro": "This Refund Policy outlines the conditions under which refunds are issued for Vondera services.",
+    "sections": {
+      "eligibility": {
+        "title": "Refund Eligibility",
+        "content": "Refunds may be requested within 14 days of purchase if you have not actively used the service. Digital products and customizations are non-refundable."
+      },
+      "process": {
+        "title": "Refund Process",
+        "content": "To request a refund, contact our support team at info@vondera.app with your order details. Refunds are processed within 7-10 business days."
+      },
+      "exceptions": {
+        "title": "Exceptions",
+        "content": "Annual subscriptions, domain registrations, and third-party services are non-refundable. Partial refunds may be issued at our discretion."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "content": "For any questions about our refund policy, please contact us at info@vondera.app or call +20 10 70068383."
+      }
+    }
+  },
+  "shopifyPage": {
+    "title": "Switch from Shopify to Vondera",
+    "subtitle": "Built for Egyptian merchants. Save money, get local support, and grow faster.",
+    "whySwitch": "Why Switch?",
+    "comparison": "Feature Comparison",
+    "pricing": "Transparent Pricing",
+    "cta": "Start Your Free Migration",
+    "benefits": [
+      "No transaction fees on sales",
+      "Local payment gateways integrated",
+      "24/7 Arabic support",
+      "Dedicated account manager",
+      "Free data migration"
+    ],
+    "features": {
+      "localPayments": "Local Payment Gateways",
+      "noTransactionFees": "Zero Transaction Fees",
+      "arabicSupport": "Full Arabic Support",
+      "localShipping": "Egyptian Shipping Integration",
+      "pricing": "Transparent Pricing"
+    }
+  },
+  "vpayPage": {
+    "hero": {
+      "title": "Accept Payments Everywhere",
+      "subtitle": "Seamless payment processing for your online store",
+      "getStarted": "Get Started",
+      "learnMore": "Learn More",
+      "instantSetup": "Instant setup",
+      "securePayments": "Secure payments",
+      "support247": "24/7 support"
+    },
+    "checkout": {
+      "title": "Checkout",
+      "securePayment": "Secure payment",
+      "verified": "Verified",
+      "totalAmount": "Total Amount",
+      "creditCards": "Credit & Debit Cards",
+      "creditCardsDesc": "Visa, Mastercard, Amex",
+      "digitalWallets": "Digital Wallets",
+      "digitalWalletsDesc": "Vodafone, InstaPay"
+    },
+    "features": {
+      "title": "Payment Methods",
+      "subtitle": "Accept payments your customers love",
+      "creditCardsTitle": "Credit & Debit Cards",
+      "creditCardsDesc": "Secure card payments",
+      "digitalWalletsTitle": "Digital Wallets",
+      "digitalWalletsDesc": "Mobile wallet payments"
+    }
+  },
+  "vdomainPage": {
+    "hero": {
+      "title": "Get Your Domain Today",
+      "titleHighlight": "In Egyptian Pounds",
+      "subtitle": "Register your domain with local currency. No credit card required.",
+      "searchPlaceholder": "Search for your perfect domain...",
+      "searchDomain": "Search Domain",
+      "getStarted": "Get Started",
+      "note": "Pay with Egyptian Pounds • No international fees"
+    },
+    "domains": {
+      "title": "Popular Domains",
+      "subtitle": "Choose from our most popular domain extensions",
+      "perYear": "/year",
+      "needDifferent": "Need a different extension?",
+      "searchMore": "Search for more domains"
+    },
+    "benefits": {
+      "title": "Buy Your Domain",
+      "titleHighlight": "No Credit Card Required",
+      "subtitle": "Purchase domains easily with local payment methods",
+      "paymentMethods": "Flexible Payment Options",
+      "localCurrency": "Local currency pricing",
+      "bankTransfer": "Bank Transfer",
+      "instapay": "Instapay"
+    }
+  },
+  "vmediaPage": {
+    "hero": {
+      "title": "Find Top",
+      "titleHighlight": "Media Buyers",
+      "subtitle": "Connect with verified media buyers to scale your e-commerce business"
+    },
+    "leaderboard": {
+      "title": "Top Performers This Month",
+      "subtitle": "Verified media buyers ranked by performance"
+    }
+  },
+  "vcommunityPage": {
+    "hero": {
+      "title": "Stop Googling.",
+      "titleHighlight": "Ask Real Merchants",
+      "subtitle": "Join thousands of e-commerce merchants sharing real experiences, solutions, and advice"
+    },
+    "stats": {
+      "merchants": "Active Merchants",
+      "discussions": "Discussions",
+      "solutions": "Solutions Shared"
+    },
+    "featured": {
+      "title": "Featured Discussions",
+      "subtitle": "Top conversations from the community"
+    },
+    "activity": {
+      "title": "Live Activity Feed"
+    },
+    "cta": {
+      "title": "Ready to Join?",
+      "subtitle": "Start getting real answers from real merchants",
+      "join": "Join Community",
+      "free": "Free Forever"
+    }
+  },
+  "vfunnelPage": {
+    "hero": {
+      "title": "Build Funnels That Actually Convert",
+      "subtitle": "Optimized sales funnels designed specifically for Egyptian e-commerce",
+      "getStarted": "Get Started Free",
+      "viewDemo": "View Demo",
+      "note": "Used by 5,000+ Egyptian stores"
+    },
+    "stats": {
+      "conversion": "Higher Conversion",
+      "conversionDesc": "vs regular pages",
+      "aov": "Average Order Value",
+      "aovDesc": "with upsells"
+    },
+    "liveUpdates": {
+      "title": "Live from Egyptian Stores",
+      "conversionUpdates": "Live Conversion Updates"
+    },
+    "results": {
+      "title": "Real Results From Egyptian Stores",
+      "subtitle": "See how merchants are crushing it with VFunnel",
+      "comparedTo": "Compared to regular product pages",
+      "thanks": "Thanks to one-click upsells"
+    }
+  },
+  "vinboxPage": {
+    "hero": {
+      "title": "Stop Losing Sales",
+      "titleHighlight": "From Slow Replies",
+      "subtitle": "Manage all your customer messages in one inbox. Reply 3x faster."
+    },
+    "features": {
+      "title": "Everything In One Place",
+      "subtitle": "Never miss a customer message again",
+      "replyFaster": "Reply 3x Faster",
+      "replyFasterDesc": "Average response time drops from 45 minutes to 12 minutes",
+      "autoReplies": "Smart Auto-Replies",
+      "autoRepliesDesc": "Handle 60% of questions automatically while you sleep"
+    },
+    "liveMessages": {
+      "title": "Live Messages"
+    },
+    "platforms": {
+      "title": "Connect All Your Platforms",
+      "subtitle": "One inbox for Facebook, Instagram, WhatsApp, and more"
+    }
+  },
+  "common": {
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "viewDemo": "View Demo",
+    "comingSoon": "Coming Soon",
+    "free": "Free",
+    "perMonth": "per month",
+    "perYear": "per year"
   }
 }

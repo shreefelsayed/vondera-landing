@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { CreditCard, Shield, Zap, TrendingUp, ArrowRight, RefreshCw, BarChart3, Wallet, Smartphone, Building2 } from 'lucide-react';
@@ -10,6 +10,7 @@ import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
 
 export default function VPayPage() {
+  const t = useTranslations('vpayPage');
   const locale = useLocale();
   const isRTL = locale === 'ar';
 
@@ -104,8 +105,8 @@ export default function VPayPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                <span className="block text-gray-900 mb-1 sm:mb-2">Accept Payments</span>
-                <span className="block text-primary-600">The Easy Way</span>
+                <span className="block text-gray-900 mb-1 sm:mb-2">{t('hero.title')}</span>
+                <span className="block text-primary-600">{t('hero.subtitle')}</span>
               </motion.h1>
               
               <motion.p 
@@ -114,8 +115,7 @@ export default function VPayPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                Enable your customers to pay with credit cards, debit cards, and digital wallets. 
-                All in one seamless checkout experience.
+                {t('hero.subtitle')}
               </motion.p>
 
               <motion.div
@@ -126,13 +126,13 @@ export default function VPayPage() {
               >
                 <a href="https://dashboard.vondera.app/dashboard" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                   <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base">
-                    Get Started Free
+                    {t('hero.getStarted')}
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                   </button>
                 </a>
                 <a href="#features" className="w-full sm:w-auto">
                   <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white hover:bg-gray-50 text-gray-900 font-semibold rounded-xl transition-all border-2 border-gray-200 hover:border-primary-300 text-sm sm:text-base">
-                    Learn More
+                    {t('hero.learnMore')}
                   </button>
                 </a>
               </motion.div>
@@ -146,15 +146,15 @@ export default function VPayPage() {
               >
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-gray-600">Instant setup</span>
+                  <span className="text-gray-600">{t('hero.instantSetup')}</span>
                 </div>
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full"></div>
-                  <span className="text-gray-600">Secure payments</span>
+                  <span className="text-gray-600">{t('hero.securePayments')}</span>
                 </div>
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-500 rounded-full"></div>
-                  <span className="text-gray-600">24/7 support</span>
+                  <span className="text-gray-600">{t('hero.support247')}</span>
                 </div>
               </motion.div>
             </motion.div>

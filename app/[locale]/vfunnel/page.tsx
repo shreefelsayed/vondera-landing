@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Zap, BarChart3, Palette, TestTube2, MousePointerClick, Layers, ArrowRight, TrendingUp, Target, Sparkles } from 'lucide-react';
@@ -44,6 +44,7 @@ const ConversionItem = ({ store, improvement, metric, icon }: ConversionUpdate) 
 };
 
 export default function VFunnelPage() {
+  const t = useTranslations('vfunnelPage');
   const locale = useLocale();
   const isRTL = locale === 'ar';
 
@@ -169,10 +170,7 @@ export default function VFunnelPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              Build Funnels That{' '}
-              <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 bg-clip-text text-transparent">
-                Actually Convert
-              </span>
+              {t('hero.title')}
             </motion.h1>
             
             {/* Subtitle */}
@@ -182,7 +180,7 @@ export default function VFunnelPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              Stop losing sales with boring product pages. Create high-converting funnels in minutes—no designer, no developer, just results.
+              {t('hero.subtitle')}
             </motion.p>
 
             {/* CTA Button */}

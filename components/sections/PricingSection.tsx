@@ -23,9 +23,10 @@ interface PricingCardProps {
   plan: Plan;
   billingPeriod: 'monthly' | '3months' | '6months' | 'yearly';
   getSavings: (period: 'monthly' | '3months' | '6months' | 'yearly', monthlyPrice: number, discountedPrice: number) => string | null;
+  t: (key: string) => string;
 }
 
-function PricingCard({ plan, billingPeriod, getSavings }: PricingCardProps) {
+function PricingCard({ plan, billingPeriod, getSavings, t }: PricingCardProps) {
   return (
     <div className={`relative h-full bg-white rounded-2xl shadow-lg p-6 md:p-8 ${
       plan.popular ? 'border-2 border-primary-500 shadow-xl' : 'border border-gray-200'
@@ -33,7 +34,7 @@ function PricingCard({ plan, billingPeriod, getSavings }: PricingCardProps) {
       {plan.popular && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
           <Badge variant="success" className="px-4 py-1 text-sm">
-            Most Popular
+            {t('mostPopular')}
           </Badge>
         </div>
       )}
@@ -47,7 +48,7 @@ function PricingCard({ plan, billingPeriod, getSavings }: PricingCardProps) {
                 {plan.prices[billingPeriod]}
                 <span className="text-base md:text-lg text-gray-500 font-normal"> EGP</span>
               </div>
-              <div className="text-sm text-gray-500 mt-2">per month</div>
+              <div className="text-sm text-gray-500 mt-2">{t('perMonth')}</div>
             </>
           ) : (
             <>
@@ -60,14 +61,14 @@ function PricingCard({ plan, billingPeriod, getSavings }: PricingCardProps) {
                 })()}
                 <span className="text-base md:text-lg text-gray-500 font-normal"> EGP</span>
               </div>
-              <div className="text-sm text-gray-500 mt-1">per month</div>
+              <div className="text-sm text-gray-500 mt-1">{t('perMonth')}</div>
 
               {/* Package Price & Savings */}
               <div className="mt-3 space-y-1.5">
                 <div className="text-base text-gray-600">
                   {plan.prices[billingPeriod]} EGP {
-                    billingPeriod === '3months' ? 'every 3 months' :
-                    billingPeriod === '6months' ? 'every 6 months' : 'per year'
+                    billingPeriod === '3months' ? t('every3Months') :
+                    billingPeriod === '6months' ? t('every6Months') : t('perYear')
                   }
                 </div>
                 <div className="flex items-center justify-center gap-2">
@@ -92,7 +93,7 @@ function PricingCard({ plan, billingPeriod, getSavings }: PricingCardProps) {
             size="lg"
             className="w-full"
           >
-            Get Started
+            {t('getStarted')}
           </Button>
         </a>
       </div>
@@ -119,7 +120,7 @@ export default function PricingSection() {
 
   const plans = [
     {
-      name: 'Starter',
+      name: t('plans.starter'),
       prices: {
         monthly: 400,
         '3months': 1080,
@@ -129,7 +130,7 @@ export default function PricingSection() {
       popular: false,
     },
     {
-      name: 'Plus',
+      name: t('plans.plus'),
       prices: {
         monthly: 700,
         '3months': 1890,
@@ -139,7 +140,7 @@ export default function PricingSection() {
       popular: true,
     },
     {
-      name: 'Pro',
+      name: t('plans.pro'),
       prices: {
         monthly: 1000,
         '3months': 2700,
@@ -151,46 +152,46 @@ export default function PricingSection() {
   ];
 
   const features = [
-    { name: 'Hosting & SSL', starter: true, plus: true, pro: true },
-    { name: 'Products Count', starter: 'Unlimited', plus: 'Unlimited', pro: 'Unlimited' },
-    { name: 'Orders Count', starter: 'Unlimited', plus: 'Unlimited', pro: 'Unlimited' },
-    { name: 'Domain Management', starter: 'Only Purchase via Vondera', plus: '+ Custom Domain', pro: '+ Custom Domain' },
-    { name: 'Website Builder', starter: 'Basic Themes', plus: 'Premium Themes', pro: 'All Themes + Full Customization' },
-    { name: 'Payment Gateways', starter: 'VPay', plus: '+ Custom Gateways', pro: '+ Custom Gateways' },
-    { name: 'Shipping Partners', starter: 'Turbo', plus: '+ Custom Couriers', pro: '+ Custom Couriers' },
-    { name: 'Product Reviews', starter: true, plus: true, pro: true },
-    { name: 'Import Products (Shopify/WooCommerce)', starter: true, plus: true, pro: true },
-    { name: 'Analytics & Reports', starter: 'Basic (Overview)', plus: '+ Advanced Reports', pro: '+ Export' },
-    { name: 'Customer Management Tools', starter: 'Basic', plus: '+ Ban', pro: '+ Export' },
-    { name: 'Access Vondera Media Buyers', starter: true, plus: true, pro: true },
-    { name: 'Community Access', starter: true, plus: true, pro: true },
-    { name: 'Expense & Profit Tracking', starter: true, plus: true, pro: true },
-    { name: 'Product Offers', starter: false, plus: true, pro: true },
-    { name: 'Funnels Builder', starter: false, plus: true, pro: true },
-    { name: 'Popup Builder', starter: false, plus: true, pro: true },
-    { name: 'Custom HTML Pages', starter: false, plus: true, pro: true },
-    { name: 'Catalog Sync with Meta', starter: false, plus: true, pro: true },
-    { name: 'Pixel & Conversion Tracking', starter: false, plus: true, pro: 'Meta Partner Auto' },
-    { name: 'Multi-language & Currency', starter: false, plus: '+ Multi Language', pro: '+ Multi-country Support' },
-    { name: 'Order Risk System', starter: false, plus: false, pro: true },
-    { name: 'Vinbox (Unified Inbox)', starter: false, plus: false, pro: true },
-    { name: 'Abandoned Cart Recovery', starter: false, plus: false, pro: true },
-    { name: 'Email Campaigns', starter: false, plus: false, pro: 'Custom' },
-    { name: 'API Access', starter: false, plus: false, pro: true },
-    { name: 'Live View (Visitors in Real Time)', starter: false, plus: false, pro: true },
-    { name: "Remove 'Powered by Vondera' Branding", starter: false, plus: false, pro: true },
-    { name: 'Team Access', starter: '3 Staff', plus: '5 Staff', pro: '15 Staff' },
-    { name: 'Customer Support', starter: 'Email & Chat (Business Hours)', plus: '24/7 Chat & WhatsApp', pro: 'Dedicated Account Manager' },
+    { name: t('features.hostingSSL'), starter: true, plus: true, pro: true },
+    { name: t('features.productsCount'), starter: t('featureValues.unlimited'), plus: t('featureValues.unlimited'), pro: t('featureValues.unlimited') },
+    { name: t('features.ordersCount'), starter: t('featureValues.unlimited'), plus: t('featureValues.unlimited'), pro: t('featureValues.unlimited') },
+    { name: t('features.domainManagement'), starter: t('featureValues.onlyPurchaseViaVondera'), plus: t('featureValues.customDomain'), pro: t('featureValues.customDomain') },
+    { name: t('features.websiteBuilder'), starter: t('featureValues.basicThemes'), plus: t('featureValues.premiumThemes'), pro: t('featureValues.allThemesFullCustomization') },
+    { name: t('features.paymentGateways'), starter: t('featureValues.vpay'), plus: t('featureValues.customGateways'), pro: t('featureValues.customGateways') },
+    { name: t('features.shippingPartners'), starter: t('featureValues.turbo'), plus: t('featureValues.customCouriers'), pro: t('featureValues.customCouriers') },
+    { name: t('features.productReviews'), starter: true, plus: true, pro: true },
+    { name: t('features.importProducts'), starter: true, plus: true, pro: true },
+    { name: t('features.analyticsReports'), starter: t('featureValues.basicOverview'), plus: t('featureValues.advancedReports'), pro: t('featureValues.export') },
+    { name: t('features.customerManagement'), starter: t('featureValues.basic'), plus: t('featureValues.ban'), pro: t('featureValues.export') },
+    { name: t('features.accessMediaBuyers'), starter: true, plus: true, pro: true },
+    { name: t('features.communityAccess'), starter: true, plus: true, pro: true },
+    { name: t('features.expenseProfitTracking'), starter: true, plus: true, pro: true },
+    { name: t('features.productOffers'), starter: false, plus: true, pro: true },
+    { name: t('features.funnelsBuilder'), starter: false, plus: true, pro: true },
+    { name: t('features.popupBuilder'), starter: false, plus: true, pro: true },
+    { name: t('features.customHTMLPages'), starter: false, plus: true, pro: true },
+    { name: t('features.catalogSyncMeta'), starter: false, plus: true, pro: true },
+    { name: t('features.pixelConversionTracking'), starter: false, plus: true, pro: t('featureValues.metaPartnerAuto') },
+    { name: t('features.multiLanguageCurrency'), starter: false, plus: t('featureValues.multiLanguage'), pro: t('featureValues.multiCountrySupport') },
+    { name: t('features.orderRiskSystem'), starter: false, plus: false, pro: true },
+    { name: t('features.vinbox'), starter: false, plus: false, pro: true },
+    { name: t('features.abandonedCartRecovery'), starter: false, plus: false, pro: true },
+    { name: t('features.emailCampaigns'), starter: false, plus: false, pro: t('featureValues.custom') },
+    { name: t('features.apiAccess'), starter: false, plus: false, pro: true },
+    { name: t('features.liveView'), starter: false, plus: false, pro: true },
+    { name: t('features.removeBranding'), starter: false, plus: false, pro: true },
+    { name: t('features.teamAccess'), starter: t('featureValues.3Staff'), plus: t('featureValues.5Staff'), pro: t('featureValues.15Staff') },
+    { name: t('features.customerSupport'), starter: t('featureValues.emailChatBusinessHours'), plus: t('featureValues.24_7ChatWhatsApp'), pro: t('featureValues.dedicatedAccountManager') },
   ];
 
   const billingOptions = ['monthly', '3months', '6months', 'yearly'] as const;
 
   const getBillingLabel = (period: typeof billingPeriod) => {
     switch (period) {
-      case 'monthly': return 'Monthly';
-      case '3months': return '3 Months';
-      case '6months': return '6 Months';
-      case 'yearly': return '12 Months';
+      case 'monthly': return t('monthly');
+      case '3months': return t('3months');
+      case '6months': return t('6months');
+      case 'yearly': return t('yearly');
     }
   };
 
@@ -200,7 +201,7 @@ export default function PricingSection() {
     const normalTotal = monthlyPrice * months;
     const savings = normalTotal - discountedPrice;
     const percentage = Math.round((savings / normalTotal) * 100);
-    return `Save ${percentage}%`;
+    return t('save', { percentage: percentage.toString() });
   };
 
   const handleSliderChange = (value: number) => {
@@ -258,10 +259,10 @@ export default function PricingSection() {
                   }}
                 />
                 <div className="flex justify-between mt-3 text-xs text-gray-500 font-medium">
-                  <span>Monthly</span>
-                  <span>3M</span>
-                  <span>6M</span>
-                  <span>12M</span>
+                  <span>{t('sliderLabels.monthly')}</span>
+                  <span>{t('sliderLabels.3m')}</span>
+                  <span>{t('sliderLabels.6m')}</span>
+                  <span>{t('sliderLabels.12m')}</span>
                 </div>
               </div>
             </div>
@@ -281,7 +282,7 @@ export default function PricingSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={plan.popular ? 'md:-mt-4' : ''}
               >
-                <PricingCard plan={plan} billingPeriod={billingPeriod} getSavings={getSavings} />
+                <PricingCard plan={plan} billingPeriod={billingPeriod} getSavings={getSavings} t={t} />
               </motion.div>
             ))}
           </div>
@@ -298,7 +299,7 @@ export default function PricingSection() {
                   transition={{ duration: 0.3 }}
                   className="w-full"
                 >
-                  <PricingCard plan={plans[currentSlide]} billingPeriod={billingPeriod} getSavings={getSavings} />
+                  <PricingCard plan={plans[currentSlide]} billingPeriod={billingPeriod} getSavings={getSavings} t={t} />
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -349,7 +350,7 @@ export default function PricingSection() {
                 <thead>
                   <tr className="bg-gradient-to-r from-primary-50 to-violet-50 border-b-2 border-primary-200">
                     <th className="py-3 sm:py-5 px-3 sm:px-6 text-left text-sm sm:text-base font-bold text-gray-900 sticky left-0 bg-gradient-to-r from-primary-50 to-violet-50 z-10 min-w-[200px] sm:min-w-0">
-                      Features Comparison
+                      {t('featuresComparison')}
                     </th>
                     {plans.map((plan, idx) => (
                       <th key={plan.name} className={`py-3 sm:py-5 px-2 sm:px-6 text-center min-w-[80px] sm:min-w-[120px] ${
@@ -359,7 +360,7 @@ export default function PricingSection() {
                           <span className="text-sm sm:text-base font-bold text-gray-900">{plan.name}</span>
                           {plan.popular && (
                             <Badge variant="success" className="text-xs px-2">
-                              Popular
+                              {t('popular')}
                             </Badge>
                           )}
                         </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Globe, Search, Lock, Zap, CreditCard, MapPin, Check, ArrowRight, Shield, TrendingUp, RefreshCw, DollarSign } from 'lucide-react';
 import Header from '@/components/layout/Header';
@@ -9,6 +9,7 @@ import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
 
 export default function VDomainPage() {
+  const t = useTranslations('vdomainPage');
   const locale = useLocale();
   const isRTL = locale === 'ar';
 
@@ -85,15 +86,14 @@ export default function VDomainPage() {
               </Badge>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                <span className="block text-gray-900">Your Domain,</span>
+                <span className="block text-gray-900">{t('hero.title')}</span>
                 <span className="block text-primary-600">
-                  Your Business Identity
+                  {t('hero.titleHighlight')}
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-                Register your custom domain and build your online presence. 
-                <span className="font-semibold text-gray-900"> Pay in Egyptian Pounds, no credit card needed.</span>
+                {t('hero.subtitle')}
               </p>
 
               {/* Domain Search Box */}
