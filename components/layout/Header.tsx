@@ -247,6 +247,15 @@ export default function Header({ variant = 'transparent' }: HeaderProps) {
             >
               {t('about')}
             </Link>
+            <Link 
+              href={`/${locale}/blog`} 
+              className={cn(
+                "transition-colors duration-300 hover:text-primary-500",
+                shouldBeWhite ? "text-gray-700" : "text-white"
+              )}
+            >
+              {t('blog')}
+            </Link>
           </nav>
 
           {/* CTA Buttons */}
@@ -462,6 +471,16 @@ export default function Header({ variant = 'transparent' }: HeaderProps) {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <span className="font-medium">About</span>
+                <ChevronRight size={18} className="opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all" />
+              </Link>
+
+              {/* Blog */}
+              <Link
+                href={`/${locale}/blog`}
+                className="flex items-center justify-between px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-xl transition-all group"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <span className="font-medium">Blog</span>
                 <ChevronRight size={18} className="opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all" />
               </Link>
             </div>

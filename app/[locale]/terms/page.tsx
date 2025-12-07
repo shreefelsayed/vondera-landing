@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import AnnouncementBanner from '@/components/layout/AnnouncementBanner';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import LegalContent from '@/components/legal/LegalContent';
@@ -48,7 +47,6 @@ We are not liable for any indirect, incidental, special, or consequential damage
 
   return (
     <>
-      <AnnouncementBanner />
       <Header />
       <main className="min-h-screen">
         <LegalContent
