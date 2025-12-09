@@ -13,6 +13,7 @@ import CourseFAQ from '@/components/course/CourseFAQ';
 import FinalCTA from '@/components/course/FinalCTA';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://vondera.app'),
   title: 'كورس الميديا بايينج المجاني - تعلم الإعلانات الرقمية مع Vondera',
   description: 'كورس شامل مجاني يعلّمك الميديا بايينج خطوة بخطوة. تعلم إعلانات Meta وTikTok وSnapchat من الصفر للاحتراف. ابدأ دلوقتي مجانًا!',
 
@@ -28,7 +29,8 @@ export const metadata: Metadata = {
         url: 'https://vondera.app/course%20image.jpg',
         width: 1200,
         height: 630,
-        alt: 'كورس الميديا بايينج المجاني - Vondera'
+        alt: 'كورس الميديا بايينج المجاني - Vondera',
+        type: 'image/jpeg'
       }
     ]
   },
@@ -75,6 +77,16 @@ export const metadata: Metadata = {
 export default function CoursePage() {
   return (
     <>
+      {/* Additional meta tags for better WhatsApp sharing */}
+      <head>
+        <meta property="og:image" content="https://vondera.app/course%20image.jpg" />
+        <meta property="og:image:secure_url" content="https://vondera.app/course%20image.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="كورس الميديا بايينج المجاني - Vondera" />
+      </head>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
