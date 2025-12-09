@@ -16,10 +16,13 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import CountdownTimer from './CountdownTimer';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function EnhancedRoadmap() {
   const [expandedModule, setExpandedModule] = useState<number | null>(0);
   const [showAllModules, setShowAllModules] = useState(false);
+  const t = useTranslations('course.roadmap');
+  const locale = useLocale();
 
   const modules = [
     {
@@ -167,7 +170,7 @@ export default function EnhancedRoadmap() {
   };
 
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden" dir="rtl">
+    <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       {/* Background Decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary-200 rounded-full filter blur-3xl opacity-30"></div>
@@ -185,13 +188,13 @@ export default function EnhancedRoadmap() {
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-500 to-vmedia-500 text-white px-6 py-3 rounded-full font-bold mb-6 shadow-lg">
             <Sparkles size={20} />
-            <span>خارطة الطريق الكاملة</span>
+            <span>{t('badge')}</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            رحلتك من <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-vmedia-500">الصفر للاحتراف</span>
+            {t('title')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-vmedia-500">{t('titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            8 وحدات تدريبية متكاملة | 20+ ساعة محتوى | 50+ درس عملي
+            {t('subtitle')}
           </p>
         </motion.div>
 
