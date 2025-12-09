@@ -3,8 +3,12 @@
 import { motion } from 'framer-motion';
 import { Star, Zap } from 'lucide-react';
 import CountdownTimer from './CountdownTimer';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function CourseHero() {
+  const t = useTranslations('course.hero');
+  const locale = useLocale();
+  
   const handleCTAClick = () => {
     window.open('https://docs.google.com/forms/d/e/1FAIpQLSdet6LOSWvwKWwBfpjcGM0jRx3Cjg8S6U_Kd4h1u9p7HMX6Uw/viewform', '_blank');
   };
@@ -12,7 +16,7 @@ export default function CourseHero() {
   return (
     <>
       {/* Hero Content Section - White Background */}
-      <section className="relative bg-white overflow-hidden pb-16" dir="rtl">
+      <section className="relative bg-white overflow-hidden py-8 md:py-12" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center">
             {/* Social Proof - Stars and Reviews */}
@@ -38,9 +42,9 @@ export default function CourseHero() {
               </div>
 
               {/* Review Count */}
-              <div className="text-right">
-                <div className="text-sm font-bold text-gray-900">مراجع من +800</div>
-                <div className="text-xs text-gray-600">طالب راضي</div>
+              <div className={locale === 'ar' ? 'text-right' : 'text-left'}>
+                <div className="text-sm font-bold text-gray-900">{t('reviews')}</div>
+                <div className="text-xs text-gray-600">{t('students')}</div>
               </div>
             </motion.div>
 
@@ -51,18 +55,18 @@ export default function CourseHero() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight px-2"
             >
-              <span className="text-gray-900">اتعلّم </span>
+              <span className="text-gray-900">{t('headline1')} </span>
               <span className="text-primary-500">
-                الميديا بايينج
+                {t('headline2')}
               </span>
-              <span className="text-gray-900"> وابدأ تكسب من </span>
+              <span className="text-gray-900"> {t('headline3')} </span>
               <span className="text-primary-500">
-                الإعلانات
+                {t('headline4')}
               </span>
               <span className="text-gray-900">…</span>
               <br />
               <span className="text-lg md:text-xl lg:text-2xl text-gray-700">
-                من غير خبرة، ومن غير ما تضيع فلوسك على تجارب!
+                {t('subheadline')}
               </span>
             </motion.h1>
 
@@ -73,7 +77,7 @@ export default function CourseHero() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-base md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-10 leading-relaxed max-w-4xl mx-auto px-2"
             >
-              كورس شامل يعلّمك خطوة بخطوة تبدأ حملات ناجحة على Meta – TikTok – Snapchat
+              {t('description')}
             </motion.p>
 
             {/* Yellow CTA Button - FREE */}
@@ -86,8 +90,8 @@ export default function CourseHero() {
             >
               <div className="flex items-center justify-center gap-2 md:gap-3">
                 <Zap className="w-5 h-5 md:w-7 md:h-7" />
-                <span>اشترك الآن مجانًا</span>
-                <span className="hidden sm:inline line-through opacity-75 text-sm md:text-lg">بدلاً من 5,000 جنيه</span>
+                <span>{t('ctaButton')}</span>
+                <span className="hidden sm:inline line-through opacity-75 text-sm md:text-lg">{t('priceStrike')}</span>
               </div>
             </motion.button>
 
@@ -109,7 +113,7 @@ export default function CourseHero() {
               className="mt-8 inline-block bg-gray-100 border border-gray-200 rounded-2xl px-6 py-3"
             >
               <p className="text-gray-700 text-sm">
-                بالتعاون مع <span className="text-gray-900 font-bold">محمد الكومي</span> - خبير التجارة الإلكترونية #1 في مصر
+                {t('instructor')} <span className="text-gray-900 font-bold">{t('instructorName')}</span> - {t('instructorTitle')}
               </p>
             </motion.div>
           </div>

@@ -2,43 +2,46 @@
 
 import { motion } from 'framer-motion';
 import { Users, Briefcase, TrendingUp, Lightbulb, Target, Zap } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function WhoIsThisFor() {
+  const t = useTranslations('course.whoIsThisFor');
+  const locale = useLocale();
   const audiences = [
     {
       icon: TrendingUp,
-      title: 'أي حد عايز يزود دخله',
-      description: 'سواء كنت موظف أو طالب، الكورس هيفتح لك مصدر دخل إضافي مضمون من البيت',
+      title: t('audiences.increasingIncome.title'),
+      description: t('audiences.increasingIncome.description'),
       gradient: 'from-green-500 to-green-600'
     },
     {
       icon: Briefcase,
-      title: 'أصحاب مشاريع عايزين يديروا الإعلانات بنفسهم',
-      description: 'وفّر آلاف الجنيهات على الإعلانات وحقق نتائج أفضل بنفسك',
+      title: t('audiences.businessOwners.title'),
+      description: t('audiences.businessOwners.description'),
       gradient: 'from-blue-500 to-blue-600'
     },
     {
       icon: Lightbulb,
-      title: 'المبتدئين في مجال الميديا بايينج',
-      description: 'ما تحتاجش أي خبرة سابقة، الكورس يبدأ معاك من الصفر',
+      title: t('audiences.beginners.title'),
+      description: t('audiences.beginners.description'),
       gradient: 'from-purple-500 to-purple-600'
     },
     {
       icon: Target,
-      title: 'موظفين تسويق عايزين يطوّروا شغلهم',
-      description: 'طوّر مهاراتك وزود فرصك في سوق العمل بمهارات عملية مطلوبة',
+      title: t('audiences.marketers.title'),
+      description: t('audiences.marketers.description'),
       gradient: 'from-red-500 to-red-600'
     },
     {
       icon: Zap,
-      title: 'فريلانسرز عايزين مهارة جديدة',
-      description: 'أضف خدمة الميديا بايينج لخدماتك وضاعف دخلك الشهري',
+      title: t('audiences.freelancers.title'),
+      description: t('audiences.freelancers.description'),
       gradient: 'from-orange-500 to-orange-600'
     },
     {
       icon: Users,
-      title: 'طلاب بيدوّروا على مجال مربح',
-      description: 'ابدأ شغلك في مجال الميديا بايينج وأنت لسه في الجامعة',
+      title: t('audiences.students.title'),
+      description: t('audiences.students.description'),
       gradient: 'from-pink-500 to-pink-600'
     }
   ];
@@ -48,7 +51,7 @@ export default function WhoIsThisFor() {
   };
 
   return (
-    <section className="py-12 md:py-20 bg-white relative overflow-hidden" dir="rtl">
+    <section className="py-12 md:py-20 bg-white relative overflow-hidden" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 right-0 w-96 h-96 bg-red-500 rounded-full filter blur-3xl"></div>
@@ -65,13 +68,13 @@ export default function WhoIsThisFor() {
           className="text-center mb-16"
         >
           <div className="inline-block bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-2 rounded-full font-bold mb-6">
-            الجمهور المستهدف
+            {t('badge')}
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            مين الكورس دا <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-green-500">مناسب ليه؟</span>
+            {t('title')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-green-500">{t('titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            الكورس مصمم خصيصًا لأي حد عنده طموح يتعلم مهارة مربحة
+            {t('subtitle')}
           </p>
         </motion.div>
 

@@ -1901,6 +1901,217 @@
       "subtitle": "One inbox for Facebook, Instagram, WhatsApp, and more"
     }
   },
+  "course": {
+    "meta": {
+      "title": "Free Media Buying Course - Learn Digital Advertising with Vondera",
+      "description": "Free comprehensive course teaching media buying step by step. Learn Meta, TikTok, and Snapchat ads from scratch to pro. Start now for free!",
+      "ogTitle": "Free Media Buying Course - Learn and Earn from Ads",
+      "ogDescription": "100% practical course teaching media buying from zero. Generate additional income by managing ads on Meta, TikTok & Snapchat. Register for free now!"
+    },
+    "hero": {
+      "reviews": "800+ Reviews",
+      "students": "Happy Students",
+      "headline1": "Learn",
+      "headline2": "Media Buying",
+      "headline3": "and Start Earning from",
+      "headline4": "Ads",
+      "subheadline": "No experience needed, without wasting money on experiments!",
+      "description": "Comprehensive course teaching you step by step how to launch successful campaigns on Meta – TikTok – Snapchat",
+      "ctaButton": "Enroll Now for Free",
+      "priceStrike": "Instead of 5,000 EGP",
+      "instructor": "In collaboration with",
+      "instructorName": "Mohamed El-Koumi",
+      "instructorTitle": "#1 E-commerce Expert in Egypt"
+    },
+    "announcement": {
+      "text": "Offer ending soon!",
+      "cta": "Register Now for Free"
+    },
+    "salesProof": {
+      "badge": "Real Results",
+      "title": "Our Students Built Real Brands",
+      "titleHighlight": "and Achieved Amazing Sales",
+      "subtitle": "See the results of students who applied what they learned in the course and used Vondera",
+      "stats": {
+        "totalSales": "Total Sales",
+        "merchants": "Successful Merchants",
+        "orders": "Monthly Orders",
+        "roas": "Average ROAS"
+      }
+    },
+    "whyDifferent": {
+      "badge": "The Real Difference",
+      "title": "Why This Course is",
+      "titleHighlight": "Different?",
+      "subtitle": "Not just a theoretical course... This is a practical training program that prepares you to launch real campaigns immediately"
+    },
+    "whoIsThisFor": {
+      "badge": "Target Audience",
+      "title": "Who Is This Course",
+      "titleHighlight": "For?",
+      "subtitle": "The course is designed specifically for anyone with the ambition to learn a profitable skill",
+      "audiences": {
+        "increasingIncome": {
+          "title": "Anyone Who Wants to Increase Their Income",
+          "description": "Whether you're an employee or student, this course will open up a guaranteed additional income source from home"
+        },
+        "businessOwners": {
+          "title": "Business Owners Who Want to Manage Ads Themselves",
+          "description": "Save thousands on advertising and achieve better results on your own"
+        },
+        "beginners": {
+          "title": "Beginners in Media Buying",
+          "description": "No prior experience needed, the course starts with you from scratch"
+        },
+        "marketers": {
+          "title": "Marketing Employees Who Want to Develop Their Work",
+          "description": "Develop your skills and increase your job market opportunities with practical in-demand skills"
+        },
+        "freelancers": {
+          "title": "Freelancers Looking for a New Skill",
+          "description": "Add media buying service to your offerings and double your monthly income"
+        },
+        "students": {
+          "title": "Students Looking for a Profitable Field",
+          "description": "Start your media buying career while still in university"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Frequently Asked Questions",
+      "title": "Common",
+      "titleHighlight": "Questions",
+      "subtitle": "We've found answers to all the questions you might have",
+      "stillHaveQuestions": "Still have questions?",
+      "contactDescription": "Contact us on WhatsApp and our support team will respond immediately",
+      "contactButton": "Contact Us Now",
+      "showMore": "Show More Questions ({count}+)",
+      "questions": {
+        "beginner": {
+          "question": "Is the course suitable for beginners?",
+          "answer": "Yes absolutely! The course is designed specifically for beginners who have no experience in media buying. We start with you from scratch and explain everything step by step in a simple and easy way."
+        },
+        "free": {
+          "question": "Is the course really free?",
+          "answer": "Yes, the course is 100% free for a limited time. There are no hidden costs or monthly subscriptions. But you must register now before the offer ends."
+        },
+        "duration": {
+          "question": "How long is the course?",
+          "answer": "The course has more than 15 hours of content divided into 7 training units. You can complete the course in two weeks if you dedicate an hour a day, or according to your available time because the course is available for life."
+        },
+        "certificate": {
+          "question": "Is there a certificate after completion?",
+          "answer": "Yes, after you finish the course and apply practical campaigns you will receive an accredited completion certificate that you can add to your LinkedIn and CV."
+        },
+        "tools": {
+          "question": "Do I need any special tools or software?",
+          "answer": "All you need is a computer or laptop connected to the internet. All the tools we will use are free and available to everyone. We will explain how to use them all in the course."
+        },
+        "budget": {
+          "question": "Does the course require an advertising budget?",
+          "answer": "The course itself is completely free. But if you want to apply real campaigns after training, you will need a simple advertising budget (starting from 500-1000 EGP). But we will teach you how to test products with the lowest possible budget."
+        },
+        "support": {
+          "question": "Is there technical support if I need help?",
+          "answer": "Sure! There is a special support group on WhatsApp for all students, and the support team is available daily to answer any inquiry. Also there are live Q&A sessions every week."
+        },
+        "start": {
+          "question": "When can I start the course?",
+          "answer": "You can start immediately after registration! The course is available 24/7 and you can learn at any time that suits you. All content is recorded and available for life."
+        },
+        "platforms": {
+          "question": "Does the course cover all advertising platforms?",
+          "answer": "Yes, the course includes detailed explanation of Meta Ads (Facebook & Instagram), TikTok Ads, and Snapchat Ads. You will learn how to run successful campaigns on each platform."
+        },
+        "difference": {
+          "question": "What is the difference between this course and other courses?",
+          "answer": "This course is 100% practical and based on real applications, not just theories. Also it has examples from real campaigns, proven strategies, and ongoing support even after completion."
+        }
+      }
+    },
+    "announcementBar": {
+      "message": "⚡ Free Registration Ending Soon!",
+      "subMessage": "Register now before the offer ends",
+      "cta": "Register Now",
+      "days": "Day",
+      "hours": "Hour",
+      "minutes": "Min",
+      "seconds": "Sec"
+    },
+    "footerAnnouncementBar": {
+      "ctaPrimary": "Subscribe Now Free",
+      "ctaSecondary": "Instead of 5,000 EGP",
+      "days": "Day",
+      "hours": "Hour",
+      "minutes": "Min",
+      "seconds": "Sec"
+    },
+    "finalCTA": {
+      "badge": "Limited Offer - Completely Free!",
+      "title": "Start the Course Now",
+      "titleHighlight": "and Enter the Media Buying World",
+      "titleEnd": "Through the Front Door!",
+      "subtitle": "Register now and get instant free access to all course content",
+      "benefitsTitle": "You'll Get:",
+      "ctaPrimary": "Subscribe Now Free",
+      "ctaSecondary": "Instead of 5,000 EGP",
+      "footer": "✨ 100% Free - No Hidden Costs",
+      "benefits": {
+        "practical": "100% practical content with examples from real campaigns",
+        "lessons": "40+ practical lessons on Meta, TikTok & Snapchat",
+        "pixel": "Professional pixel explanation and tracking setup",
+        "strategies": "Product testing strategies and competition evaluation",
+        "whatsapp": "WhatsApp group for ongoing support",
+        "certificate": "Accredited completion certificate",
+        "lifetime": "Lifetime access to content",
+        "qa": "Live Q&A sessions weekly"
+      }
+    },
+    "testimonials": {
+      "badge": "Success Stories",
+      "title": "Reviews from",
+      "titleHighlight": "Previous Students",
+      "subtitle": "See what course students have achieved after applying the content",
+      "items": {
+        "ahmed": {
+          "name": "Ahmed Mohamed",
+          "role": "E-commerce Store Owner",
+          "text": "I applied what was in the first 3 modules and increased my sales 4 times! The course is very practical with no fluff. Every lesson has real value.",
+          "results": "400% increase in sales"
+        },
+        "salma": {
+          "name": "Salma Hassan",
+          "role": "Beginner Media Buyer",
+          "text": "The course is very practical and I was able to run my first successful campaign after finishing unit four. Now I work with 3 clients and earn very well.",
+          "results": "First successful campaign in two weeks"
+        },
+        "mahmoud": {
+          "name": "Mahmoud Abdullah",
+          "role": "Marketing Employee",
+          "text": "I was working in marketing but didn't understand paid advertising. This course changed everything. Now I manage the company's campaigns myself and we saved thousands.",
+          "results": "Promotion + salary increase"
+        },
+        "nour": {
+          "name": "Nour Ibrahim",
+          "role": "University Student",
+          "text": "I started working as a media buyer while still in university. The course is easy, clear and doesn't require any experience. Now I earn more than my monthly allowance!",
+          "results": "Monthly income 8000 EGP"
+        },
+        "yasser": {
+          "name": "Yasser Ali",
+          "role": "Freelancer",
+          "text": "I added media buying service to my services and doubled my monthly income. The course taught me everything from scratch, with real examples for everything.",
+          "results": "Doubled monthly income"
+        },
+        "dina": {
+          "name": "Dina Khaled",
+          "role": "Local Brand Owner",
+          "text": "I was paying thousands to advertising agencies and wasn't getting results. After the course, I run my campaigns myself, save money and achieve better results!",
+          "results": "Saving 15,000 EGP monthly"
+        }
+      }
+    }
+  },
   "common": {
     "getStarted": "Get Started",
     "learnMore": "Learn More",

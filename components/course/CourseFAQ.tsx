@@ -3,56 +3,59 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, HelpCircle } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function CourseFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [showAllFAQs, setShowAllFAQs] = useState(false);
+  const t = useTranslations('course.faq');
+  const locale = useLocale();
 
   const faqs = [
     {
-      question: 'هل الكورس مناسب للمبتدئين؟',
-      answer: 'نعم بالتأكيد! الكورس مصمم خصيصًا للمبتدئين اللي ما عندهمش أي خبرة في الميديا بايينج. نبدأ معاك من الصفر ونشرح كل حاجة خطوة بخطوة بطريقة بسيطة وسهلة.'
+      question: t('questions.beginner.question'),
+      answer: t('questions.beginner.answer')
     },
     {
-      question: 'هل الكورس فعلاً مجاني؟',
-      answer: 'نعم، الكورس مجاني 100% لفترة محدودة. ما فيش أي تكاليف خفية أو اشتراكات شهرية. بس لازم تسجل دلوقتي قبل ما العرض ينتهي.'
+      question: t('questions.free.question'),
+      answer: t('questions.free.answer')
     },
     {
-      question: 'مدة الكورس قد إيه؟',
-      answer: 'الكورس فيه أكثر من 15 ساعة محتوى مقسمين على 7 وحدات تدريبية. تقدر تخلص الكورس في أسبوعين إذا خصصت ساعة في اليوم، أو على حسب وقتك المتاح لأن الكورس متاح مدى الحياة.'
+      question: t('questions.duration.question'),
+      answer: t('questions.duration.answer')
     },
     {
-      question: 'هل في شهادة بعد الانتهاء؟',
-      answer: 'نعم، بعد ما تخلص الكورس وتطبق الحملات العملية هتحصل على شهادة إتمام معتمدة تقدر تضيفها على LinkedIn وCV بتاعك.'
+      question: t('questions.certificate.question'),
+      answer: t('questions.certificate.answer')
     },
     {
-      question: 'هل محتاج أي أدوات أو برامج خاصة؟',
-      answer: 'كل اللي محتاجه هو جهاز كمبيوتر أو لابتوب متصل بالإنترنت. كل الأدوات اللي هنستخدمها مجانية ومتاحة للجميع. هنشرح إزاي تستخدمهم كلهم في الكورس.'
+      question: t('questions.tools.question'),
+      answer: t('questions.tools.answer')
     },
     {
-      question: 'هل الكورس يتطلب ميزانية إعلانات؟',
-      answer: 'الكورس نفسه مجاني تمامًا. لكن لو عايز تطبق حملات حقيقية بعد التدريب، هتحتاج ميزانية بسيطة للإعلانات (تبدأ من 500-1000 جنيه). لكن هنعلمك إزاي تختبر المنتجات بأقل ميزانية ممكنة.'
+      question: t('questions.budget.question'),
+      answer: t('questions.budget.answer')
     },
     {
-      question: 'هل في دعم فني لو احتجت مساعدة؟',
-      answer: 'أكيد! فيه مجموعة دعم خاصة على WhatsApp لكل الطلاب، وفريق الدعم متواجد يوميًا للرد على أي استفسار. كمان فيه جلسات Q&A مباشرة كل أسبوع.'
+      question: t('questions.support.question'),
+      answer: t('questions.support.answer')
     },
     {
-      question: 'متى أقدر أبدأ الكورس؟',
-      answer: 'تقدر تبدأ فورًا بعد التسجيل! الكورس متاح 24/7 وتقدر تتعلم في أي وقت يناسبك. كل المحتوى مسجل ومتاح مدى الحياة.'
+      question: t('questions.start.question'),
+      answer: t('questions.start.answer')
     },
     {
-      question: 'هل الكورس يغطي كل منصات الإعلانات؟',
-      answer: 'نعم، الكورس يشمل شرح تفصيلي لـ Meta Ads (Facebook & Instagram)، TikTok Ads، و Snapchat Ads. هتتعلم إزاي تدير حملات ناجحة على كل منصة.'
+      question: t('questions.platforms.question'),
+      answer: t('questions.platforms.answer')
     },
     {
-      question: 'إيه الفرق بين الكورس ده والكورسات التانية؟',
-      answer: 'الكورس ده عملي 100% ومبني على تطبيقات حقيقية، مش مجرد نظريات. كمان فيه أمثلة من حملات حقيقية، استراتيجيات مجربة، ودعم مستمر حتى بعد الانتهاء.'
+      question: t('questions.difference.question'),
+      answer: t('questions.difference.answer')
     }
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-white" dir="rtl">
+    <section className="py-12 md:py-20 bg-white" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -64,13 +67,13 @@ export default function CourseFAQ() {
         >
           <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-6 py-2 rounded-full font-bold mb-6">
             <HelpCircle size={20} />
-            <span>الأسئلة الشائعة</span>
+            <span>{t('badge')}</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            أسئلة <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">متكررة</span>
+            {t('title')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">{t('titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            لقينا الإجابات على كل الأسئلة اللي ممكن تكون في بالك
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -127,7 +130,7 @@ export default function CourseFAQ() {
               onClick={() => setShowAllFAQs(true)}
               className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-6 py-3 rounded-xl font-bold shadow-lg transform hover:scale-105 transition-all duration-300"
             >
-              عرض المزيد من الأسئلة ({faqs.length - 5}+)
+              {t('showMore', { count: faqs.length - 5 })}
             </button>
           </div>
         )}
@@ -142,10 +145,10 @@ export default function CourseFAQ() {
         >
           <div className="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 rounded-2xl p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              لسه عندك أسئلة؟
+              {t('stillHaveQuestions')}
             </h3>
             <p className="text-gray-600 mb-6">
-              تواصل معانا على WhatsApp وفريق الدعم هيرد عليك فورًا
+              {t('contactDescription')}
             </p>
             <a
               href="https://wa.me/+201070068383"
@@ -156,7 +159,7 @@ export default function CourseFAQ() {
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
               </svg>
-              تواصل معانا الآن
+              {t('contactButton')}
             </a>
           </div>
         </motion.div>

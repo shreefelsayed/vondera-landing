@@ -2,8 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { Rocket, Users, Target, TrendingUp, Lightbulb, BarChart3 } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function WhyDifferent() {
+  const t = useTranslations('course.whyDifferent');
+  const locale = useLocale();
   const features = [
     {
       icon: Rocket,
@@ -42,7 +45,7 @@ export default function WhyDifferent() {
   };
 
   return (
-    <section className="py-12 md:py-20 bg-white relative overflow-hidden" dir="rtl">
+    <section className="py-12 md:py-20 bg-white relative overflow-hidden" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -61,13 +64,13 @@ export default function WhyDifferent() {
           className="text-center mb-16"
         >
           <div className="inline-block bg-red-100 text-red-600 px-6 py-2 rounded-full font-bold mb-6">
-            الفرق الحقيقي
+            {t('badge')}
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            ليه الكورس دا <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">مختلف؟</span>
+            {t('title')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">{t('titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            مش مجرد كورس نظري... دا برنامج تدريبي عملي يخليك جاهز تبدأ حملات حقيقية فورًا
+            {t('subtitle')}
           </p>
         </motion.div>
 

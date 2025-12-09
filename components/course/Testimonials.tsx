@@ -2,67 +2,70 @@
 
 import { motion } from 'framer-motion';
 import { Star, Quote, TrendingUp, DollarSign, CheckCircle } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function Testimonials() {
+  const t = useTranslations('course.testimonials');
+  const locale = useLocale();
   const testimonials = [
     {
-      name: 'أحمد محمد',
-      role: 'صاحب متجر إلكتروني',
+      name: t('items.ahmed.name'),
+      role: t('items.ahmed.role'),
       image: '👨‍💼',
       rating: 5,
-      text: 'طبقت اللي في أول 3 Modules وزودت مبيعاتي 4 أضعاف! الكورس عملي جدًا ومفيش حشو. كل درس فيه قيمة حقيقية.',
-      results: 'زيادة 400% في المبيعات',
+      text: t('items.ahmed.text'),
+      results: t('items.ahmed.results'),
       resultColor: 'text-primary-500'
     },
     {
-      name: 'سلمى حسن',
-      role: 'ميديا بايير مبتدئة',
+      name: t('items.salma.name'),
+      role: t('items.salma.role'),
       image: '👩‍💻',
       rating: 5,
-      text: 'الكورس عملي جدًا وقدرت أعمل أول حملة ناجحة بعد ما خلصت الوحدة الرابعة. دلوقتي بشتغل مع 3 عملاء وبكسب كويس جدًا.',
-      results: 'أول حملة ناجحة في أسبوعين',
+      text: t('items.salma.text'),
+      results: t('items.salma.results'),
       resultColor: 'text-vmedia-500'
     },
     {
-      name: 'محمود عبدالله',
-      role: 'موظف تسويق',
+      name: t('items.mahmoud.name'),
+      role: t('items.mahmoud.role'),
       image: '👨‍💼',
       rating: 5,
-      text: 'كنت بشتغل في التسويق بس ما كنتش فاهم الإعلانات المدفوعة. الكورس ده غيّر كل حاجة. دلوقتي بدير حملات الشركة بنفسي ووفرنا آلاف الجنيهات.',
-      results: 'ترقية + زيادة في المرتب',
+      text: t('items.mahmoud.text'),
+      results: t('items.mahmoud.results'),
       resultColor: 'text-primary-500'
     },
     {
-      name: 'نور إبراهيم',
-      role: 'طالبة جامعية',
+      name: t('items.nour.name'),
+      role: t('items.nour.role'),
       image: '👩‍🎓',
       rating: 5,
-      text: 'بدأت أشتغل ميديا بايير وأنا لسه في الجامعة. الكورس سهل وواضح ومش محتاج أي خبرة. دلوقتي بكسب أكتر من مصروفي الشهري!',
-      results: 'دخل شهري 8000 جنيه',
+      text: t('items.nour.text'),
+      results: t('items.nour.results'),
       resultColor: 'text-primary-500'
     },
     {
-      name: 'ياسر علي',
-      role: 'فريلانسر',
+      name: t('items.yasser.name'),
+      role: t('items.yasser.role'),
       image: '👨‍💻',
       rating: 5,
-      text: 'أضفت خدمة الميديا بايينج لخدماتي وضاعفت دخلي الشهري. الكورس علمني كل حاجة من الصفر، وفيه أمثلة حقيقية على كل حاجة.',
-      results: 'مضاعفة الدخل الشهري',
+      text: t('items.yasser.text'),
+      results: t('items.yasser.results'),
       resultColor: 'text-vmedia-500'
     },
     {
-      name: 'دينا خالد',
-      role: 'صاحبة براند محلي',
+      name: t('items.dina.name'),
+      role: t('items.dina.role'),
       image: '👩‍💼',
       rating: 5,
-      text: 'كنت بدفع آلاف الجنيهات لوكالات إعلانات وما كنتش بحقق نتايج. بعد الكورس بقيت أعمل حملاتي بنفسي وبوفر فلوس وبحقق نتايج أحسن!',
-      results: 'توفير 15,000 جنيه شهريًا',
+      text: t('items.dina.text'),
+      results: t('items.dina.results'),
       resultColor: 'text-primary-500'
     }
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden" dir="rtl">
+    <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -80,13 +83,13 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <div className="inline-block bg-yellow-100 text-yellow-700 px-6 py-2 rounded-full font-bold mb-6">
-            قصص نجاح
+            {t('badge')}
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            آراء <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-vmedia-500">طلاب سابقين</span>
+            {t('title')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-vmedia-500">{t('titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            شوف إيه اللي حققه طلاب الكورس بعد ما طبقوا المحتوى
+            {t('subtitle')}
           </p>
         </motion.div>
 

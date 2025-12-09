@@ -2,8 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import { Zap } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function FooterAnnouncementBar() {
+  const t = useTranslations('course.footerAnnouncementBar');
+  const locale = useLocale();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -38,7 +41,7 @@ export default function FooterAnnouncementBar() {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-gray-200 shadow-2xl" dir="rtl">
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-gray-200 shadow-2xl" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-4 py-4 md:py-5">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Countdown Timer */}
@@ -47,7 +50,7 @@ export default function FooterAnnouncementBar() {
               {/* Days */}
               <div className="text-center min-w-[60px]">
                 <div className="text-3xl md:text-4xl font-bold text-red-600">{String(timeLeft.days).padStart(2, '0')}</div>
-                <div className="text-xs text-gray-600">يوم</div>
+                <div className="text-xs text-gray-600">{t('days')}</div>
               </div>
 
               <div className="text-3xl md:text-4xl font-bold text-red-600 self-start mt-1">:</div>
@@ -55,7 +58,7 @@ export default function FooterAnnouncementBar() {
               {/* Hours */}
               <div className="text-center min-w-[60px]">
                 <div className="text-3xl md:text-4xl font-bold text-red-600">{String(timeLeft.hours).padStart(2, '0')}</div>
-                <div className="text-xs text-gray-600">ساعة</div>
+                <div className="text-xs text-gray-600">{t('hours')}</div>
               </div>
 
               <div className="text-3xl md:text-4xl font-bold text-red-600 self-start mt-1">:</div>
@@ -63,7 +66,7 @@ export default function FooterAnnouncementBar() {
               {/* Minutes */}
               <div className="text-center min-w-[60px]">
                 <div className="text-3xl md:text-4xl font-bold text-red-600">{String(timeLeft.minutes).padStart(2, '0')}</div>
-                <div className="text-xs text-gray-600">دقيقة</div>
+                <div className="text-xs text-gray-600">{t('minutes')}</div>
               </div>
 
               <div className="text-3xl md:text-4xl font-bold text-red-600 self-start mt-1">:</div>
@@ -71,7 +74,7 @@ export default function FooterAnnouncementBar() {
               {/* Seconds */}
               <div className="text-center min-w-[60px]">
                 <div className="text-3xl md:text-4xl font-bold text-red-600">{String(timeLeft.seconds).padStart(2, '0')}</div>
-                <div className="text-xs text-gray-600">ثانية</div>
+                <div className="text-xs text-gray-600">{t('seconds')}</div>
               </div>
             </div>
           </div>
@@ -83,8 +86,8 @@ export default function FooterAnnouncementBar() {
           >
             <Zap size={24} />
             <div className="flex flex-col items-start">
-              <span>اشترك الآن مجانًا</span>
-              <span className="text-sm line-through opacity-75">بدلاً من 5,000 جنيه</span>
+              <span>{t('ctaPrimary')}</span>
+              <span className="text-sm line-through opacity-75">{t('ctaSecondary')}</span>
             </div>
           </button>
         </div>

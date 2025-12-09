@@ -2,8 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { TrendingUp, DollarSign, ShoppingCart, Users, CheckCircle, Award } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function SalesProof() {
+  const t = useTranslations('course.salesProof');
+  const locale = useLocale();
   const proofItems = [
     {
       merchant: 'تاجر ناجح - مبيعات حقيقية',
@@ -67,7 +70,7 @@ export default function SalesProof() {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-white relative overflow-hidden" dir="rtl">
+    <section className="py-12 md:py-20 bg-white relative overflow-hidden" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 right-0 w-96 h-96 bg-green-500 rounded-full filter blur-3xl"></div>
@@ -85,14 +88,14 @@ export default function SalesProof() {
         >
           <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-6 py-2 rounded-full font-bold mb-6">
             <Award size={20} />
-            <span>نتائج حقيقية</span>
+            <span>{t('badge')}</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            طلابنا قدروا يعملو براند فعلي <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-vmedia-500">ويحققوا مبيعات مرعبه</span>
+            {t('title')} <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-vmedia-500">{t('titleHighlight')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            شوف نتائج طلاب طبقوا اللي اتعلموه في الكورس واستخدموا Vondera
+            {t('subtitle')}
           </p>
         </motion.div>
 

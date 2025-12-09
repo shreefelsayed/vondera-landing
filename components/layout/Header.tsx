@@ -106,7 +106,10 @@ export default function Header({ variant = 'transparent', position = 'fixed' }: 
 
   const toggleLanguage = () => {
     const newLocale = locale === 'en' ? 'ar' : 'en';
-    window.location.href = `/${newLocale}`;
+    const currentPath = window.location.pathname;
+    // Get the path after the locale
+    const pathWithoutLocale = currentPath.replace(/^\/(ar|en)/, '');
+    window.location.href = `/${newLocale}${pathWithoutLocale}`;
   };
 
   // Determine if we should show solid background
