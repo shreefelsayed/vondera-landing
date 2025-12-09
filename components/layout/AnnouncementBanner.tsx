@@ -1,18 +1,14 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
-import { Megaphone, X } from 'lucide-react';
+import { Megaphone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function AnnouncementBanner() {
-  const [isVisible, setIsVisible] = useState(true);
   const locale = useLocale();
   const t = useTranslations('mediaBuyerBanner');
   const isRTL = locale === 'ar';
-
-  if (!isVisible) return null;
 
   return (
     <div
@@ -27,20 +23,13 @@ export default function AnnouncementBanner() {
               <span className="font-bold">{t('title')}</span> {t('subtitle')}
             </p>
           </div>
-          <div className="flex items-center space-x-4 ml-4">
+          <div className="flex items-center ml-4">
             <Link
               href={`/${locale}/vmedia`}
               className="bg-white text-vmedia-600 px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap"
             >
               {t('cta')}
             </Link>
-            <button
-              onClick={() => setIsVisible(false)}
-              className="text-white hover:text-gray-200 transition-colors"
-              aria-label="Close banner"
-            >
-              <X size={18} />
-            </button>
           </div>
         </div>
       </div>

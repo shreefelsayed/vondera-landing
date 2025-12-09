@@ -11,9 +11,10 @@ import { Container } from '@/components/ui/Container';
 
 interface HeaderProps {
   variant?: 'transparent' | 'solid';
+  position?: 'fixed' | 'relative';
 }
 
-export default function Header({ variant = 'transparent' }: HeaderProps) {
+export default function Header({ variant = 'transparent', position = 'fixed' }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSolutionOpen, setIsSolutionOpen] = useState(false);
@@ -114,9 +115,10 @@ export default function Header({ variant = 'transparent' }: HeaderProps) {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
+        'transition-all duration-300 ease-in-out',
+        position === 'fixed' ? 'fixed top-0 left-0 right-0 z-50' : 'relative',
         shouldBeWhite
-          ? 'bg-white/95 backdrop-blur-lg shadow-md' 
+          ? 'bg-white/95 backdrop-blur-lg shadow-md'
           : 'bg-transparent before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-b before:from-black/20 before:to-transparent before:pointer-events-none'
       )}
       dir={isRTL ? 'rtl' : 'ltr'}

@@ -83,6 +83,16 @@
     backdrop-filter: blur(16px);
     border: 1px solid rgba(229, 231, 235, 0.5);
   }
+
+  /* Hide scrollbar for horizontal scroll sections */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+  }
 }
 
 /* Custom scrollbar */
