@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: 'Vondera',
     images: [
       {
-        url: '/course image.jpg',
+        url: 'https://vondera.app/course%20image.jpg',
         width: 1200,
         height: 630,
         alt: 'كورس الميديا بايينج المجاني - Vondera'
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'كورس الميديا بايينج المجاني - Vondera',
     description: 'تعلم الميديا بايينج من الصفر للاحتراف. كورس عملي شامل على Meta و TikTok و Snapchat. سجل مجانًا!',
-    images: ['/course image.jpg'],
+    images: ['https://vondera.app/course%20image.jpg'],
     creator: '@VonderaApp',
     site: '@VonderaApp'
   },
@@ -111,7 +111,7 @@ export default function CoursePage() {
               bestRating: '5',
               worstRating: '1'
             },
-            image: 'https://vondera.app/course image.jpg'
+            image: 'https://vondera.app/course%20image.jpg'
           })
         }}
       />
