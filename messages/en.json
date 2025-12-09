@@ -2110,6 +2110,18 @@
           "results": "Saving 15,000 EGP monthly"
         }
       }
+    },
+    "roadmap": {
+      "badge": "Complete Roadmap",
+      "title": "Your Journey from",
+      "titleHighlight": "Zero to Professional",
+      "subtitle": "8 comprehensive training units | 20+ hours content | 50+ practical lessons",
+      "showMore": "Show All Units ({count}+)",
+      "newBadge": "New!",
+      "moduleLabel": "Unit",
+      "lessons": "Lessons",
+      "expandModule": "Show unit content",
+      "collapseModule": "Hide content"
     }
   },
   "common": {
