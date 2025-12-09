@@ -146,7 +146,7 @@ export default function CoursePage() {
       <FooterAnnouncementBar />
 
       <a
-        href="https://wa.me/+201234567890?text=مرحباً! عندي استفسار عن كورس الميديا بايينج"
+        href="https://wa.me/+201070068383?text=مرحباً! عندي استفسار عن كورس الميديا بايينج"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 left-8 z-50 w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-2xl transform hover:scale-110 transition-all duration-300 animate-bounce"

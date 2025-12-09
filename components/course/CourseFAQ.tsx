@@ -148,7 +148,7 @@ export default function CourseFAQ() {
               تواصل معانا على WhatsApp وفريق الدعم هيرد عليك فورًا
             </p>
             <a
-              href="https://wa.me/+201234567890"
+              href="https://wa.me/+201070068383"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
