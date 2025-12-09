@@ -14,12 +14,10 @@ export default function CountdownTimer({
   size = 'md',
   showIcon = true
 }: CountdownTimerProps) {
-  // Default to 48 hours from now if no target date provided
+  // Default to December 20, 2025 if no target date provided
   const [endDate] = useState(() => {
     if (targetDate) return targetDate;
-    const date = new Date();
-    date.setHours(date.getHours() + 48);
-    return date;
+    return new Date('2025-12-20T23:59:59');
   });
 
   const calculateTimeLeft = () => {
