@@ -30,7 +30,7 @@ export default function EnhancedRoadmap() {
       icon: PlayCircle,
       title: 'مقدمة الميديا باير',
       description: 'ابدأ رحلتك في عالم الميديا بايينج',
-      duration: '2 ساعة',
+      duration: '1 ساعة',
       lessons: 5,
       color: 'from-primary-500 to-primary-600',
       content: [
@@ -46,7 +46,7 @@ export default function EnhancedRoadmap() {
       icon: ShoppingCart,
       title: 'اختيار المنتج واختباره',
       description: 'أهم خطوة في نجاح أي حملة',
-      duration: '3 ساعات',
+      duration: '1 ساعة',
       lessons: 6,
       color: 'from-vmedia-500 to-vmedia-600',
       content: [
@@ -63,7 +63,7 @@ export default function EnhancedRoadmap() {
       icon: Code,
       title: 'إعداد البيكسل وربطه بالموقع',
       description: 'الأساس التقني لأي حملة ناجحة',
-      duration: '2.5 ساعة',
+      duration: '1 ساعة',
       lessons: 5,
       color: 'from-blue-500 to-blue-600',
       content: [
@@ -79,7 +79,7 @@ export default function EnhancedRoadmap() {
       icon: Target,
       title: 'إنشاء حملات Meta',
       description: 'احترف Facebook & Instagram Ads',
-      duration: '4 ساعات',
+      duration: '1 ساعة',
       lessons: 6,
       color: 'from-primary-500 to-primary-600',
       content: [
@@ -96,7 +96,7 @@ export default function EnhancedRoadmap() {
       icon: Video,
       title: 'TikTok & Snapchat Ads',
       description: 'المنصات الأسرع نموًا',
-      duration: '3 ساعات',
+      duration: '1 ساعة',
       lessons: 6,
       color: 'from-pink-500 to-pink-600',
       content: [
@@ -113,7 +113,7 @@ export default function EnhancedRoadmap() {
       icon: Image,
       title: 'التعامل مع الكرييتيف',
       description: 'المحتوى هو الملك',
-      duration: '2.5 ساعة',
+      duration: '1 ساعة',
       lessons: 6,
       color: 'from-orange-500 to-orange-600',
       content: [
@@ -130,7 +130,7 @@ export default function EnhancedRoadmap() {
       icon: BarChart3,
       title: 'قياس النتائج والتحسين',
       description: 'البيانات هي طريقك للنجاح',
-      duration: '3 ساعات',
+      duration: '1 ساعة',
       lessons: 6,
       color: 'from-vmedia-500 to-vmedia-600',
       content: [
@@ -147,7 +147,7 @@ export default function EnhancedRoadmap() {
       icon: Rocket,
       title: 'Vondera Walkthrough',
       description: 'إطلاق متجرك في دقائق',
-      duration: '2 ساعة',
+      duration: '1 ساعة',
       lessons: 9,
       color: 'from-primary-500 to-vmedia-500',
       isNew: true,
@@ -224,7 +224,7 @@ export default function EnhancedRoadmap() {
                         <div className="absolute -top-4 -right-4 z-20">
                           <div className="bg-gradient-to-r from-vmedia-500 to-vmedia-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-xl animate-bounce-slow flex items-center gap-2">
                             <Sparkles size={16} />
-                            <span>جديد!</span>
+                            <span>{t('newBadge')}</span>
                           </div>
                         </div>
                       )}
@@ -238,7 +238,7 @@ export default function EnhancedRoadmap() {
                               <module.icon size={32} />
                             </div>
                             <div className="flex-1">
-                              <div className="text-sm font-semibold opacity-90 mb-1">الوحدة {module.number}</div>
+                              <div className="text-sm font-semibold opacity-90 mb-1">{t('moduleLabel')} {module.number}</div>
                               <h3 className="text-2xl font-bold">{module.title}</h3>
                             </div>
                           </div>
@@ -259,7 +259,7 @@ export default function EnhancedRoadmap() {
                               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                               </svg>
-                              <span>{module.lessons} دروس</span>
+                              <span>{module.lessons} {t('lessons')}</span>
                             </div>
                           </div>
 
@@ -268,7 +268,7 @@ export default function EnhancedRoadmap() {
                             onClick={() => setExpandedModule(expandedModule === index ? null : index)}
                             className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl transition-colors group"
                           >
-                            <span className="font-semibold text-gray-700">عرض محتوى الوحدة</span>
+                            <span className="font-semibold text-gray-700">{expandedModule === index ? t('collapseModule') : t('expandModule')}</span>
                             <ChevronDown
                               size={20}
                               className={`text-gray-500 transform transition-transform group-hover:text-primary-500 ${
@@ -335,7 +335,7 @@ export default function EnhancedRoadmap() {
                 onClick={() => setShowAllModules(true)}
                 className="bg-gradient-to-r from-primary-500 to-vmedia-500 hover:from-primary-600 hover:to-vmedia-600 text-white px-8 py-4 rounded-2xl font-bold shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2 mx-auto"
               >
-                <span>عرض جميع الوحدات ({modules.length})</span>
+                <span>{t('showMore', { count: modules.length - 4 })}</span>
                 <ChevronDown size={20} />
               </button>
             </motion.div>

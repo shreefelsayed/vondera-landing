@@ -105,6 +105,46 @@ export default function CourseHero() {
               <CountdownTimer size="lg" />
             </motion.div>
 
+            {/* Course Schedule Info */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 0.5 }}
+              className="mt-8 max-w-2xl mx-auto space-y-3"
+            >
+              <div className="bg-gradient-to-r from-primary-50 to-vmedia-50 border-2 border-primary-200 rounded-xl p-4">
+                <p className="text-gray-900 font-bold text-base md:text-lg">{t('courseStart')}</p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-3">
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-4">
+                  <p className="text-gray-800 font-semibold text-sm md:text-base">{t('courseDuration')}</p>
+                </div>
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-4">
+                  <p className="text-gray-800 font-semibold text-sm md:text-base">{t('courseFormat')}</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Instructor Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 0.5 }}
+              className="mt-8 max-w-2xl mx-auto space-y-3"
+            >
+              <div className="bg-gradient-to-r from-primary-50 to-vmedia-50 border-2 border-primary-200 rounded-xl p-4">
+                <p className="text-gray-900 font-bold text-base md:text-lg">{t('courseStart')}</p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-3">
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-4">
+                  <p className="text-gray-800 font-semibold text-sm md:text-base">{t('courseDuration')}</p>
+                </div>
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-4">
+                  <p className="text-gray-800 font-semibold text-sm md:text-base">{t('courseFormat')}</p>
+                </div>
+              </div>
+            </motion.div>
+
             {/* Instructor Badge */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -120,7 +160,7 @@ export default function CourseHero() {
         </div>
       </section>
 
-      {/* Full Width Video Player Section - YouTube Style */}
+      {/* Full Width Video Player Section - Responsive */}
       <section className="relative w-full bg-black">
         <motion.div
           initial={{ opacity: 0 }}
@@ -129,8 +169,26 @@ export default function CourseHero() {
           transition={{ duration: 0.8 }}
           className="relative w-full"
         >
-          {/* Video Container with 56.25% aspect ratio (16:9) - YouTube style */}
-          <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
+          {/* Desktop: 16:9 aspect ratio, Mobile: Vertical reels style (9:16) */}
+          <div className="relative w-full md:hidden" style={{ paddingTop: '177.78%' }}>
+            <video
+              className="absolute top-0 left-0 w-full h-full"
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/course image.jpg"
+              controlsList="nodownload"
+              style={{ objectFit: 'cover' }}
+            >
+              <source src="/course.mp4" type="video/mp4" />
+              المتصفح لا يدعم عرض الفيديو
+            </video>
+          </div>
+          
+          {/* Desktop view: 16:9 aspect ratio */}
+          <div className="relative w-full hidden md:block" style={{ paddingTop: '56.25%' }}>
             <video
               className="absolute top-0 left-0 w-full h-full"
               controls
